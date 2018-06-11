@@ -7,7 +7,9 @@
             </div>
             <div class="demo-select">
                  <in-select v-model="form.select2" :select="selectArray2"></in-select>
-                 
+            </div>
+            <div class="demo-select">
+                 <in-select disabled v-model="form.select2" :select="selectArray2"></in-select>
             </div>
             <div class="demo-button">
                 <in-button @click="btnClick">显示</in-button>

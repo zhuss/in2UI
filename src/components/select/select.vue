@@ -31,6 +31,11 @@ export default {
             currentValue:this.value
         }
     },
+    watch:{
+        value(value){
+            this.currentValue = value;
+        }
+    },
     methods:{
         //获取当前页面的最大Index
         getIndex(){
@@ -98,6 +103,10 @@ export default {
         font-size: 14px;
         color: @regularColor;
         cursor: pointer;
+        &:disabled{
+            opacity: .6;
+            background: #EEE;
+        }
     }
     >.in-select-panel{
         position: absolute;
