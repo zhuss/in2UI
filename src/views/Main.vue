@@ -6,14 +6,10 @@
             <div class="demo-body">
                 <in-button @click="clickOne">默认按钮</in-button>
                 <in-button  @click="primaryClick" type="primary">主要按钮</in-button>
-            </div>
-            <h2 class="demo-title">圆角按钮</h2>
-            <div class="demo-body">
+
                 <in-button round>圆角按钮</in-button>
                 <in-button round type="primary">圆角按钮</in-button>
-            </div>
-            <h2 class="demo-title">禁用按钮</h2>
-            <div class="demo-body">
+
                 <in-button :disabled="true">默认按钮</in-button>
                 <in-button disabled type="primary">主要按钮</in-button>
             </div>
