@@ -60,6 +60,7 @@ export default {
             border: 1px solid @secondaryColor;
             border-radius:2px; 
             box-sizing: border-box;
+            transition: all .2s;
         }
         &:disabled{
             cursor: not-allowed;
