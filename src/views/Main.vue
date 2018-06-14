@@ -7,7 +7,7 @@
                 <in-button @click="clickOne">默认按钮</in-button>
                 <in-button  @click="primaryClick" type="primary">主要按钮</in-button>
 
-                <in-button round>圆角按钮</in-button>
+                <in-button round @click="confirmClick">圆角按钮</in-button>
                 <in-button round type="primary">圆角按钮</in-button>
 
                 <in-button :disabled="true">默认按钮</in-button>
@@ -93,6 +93,25 @@ export default {
         },
         primaryClick(){
             this.$message("这是一条消息提示");
+        },
+        confirmClick(e){
+            this.$confirm({
+                title:'温馨提示',
+                text:'确认从记忆里删除吗？',
+                confirmButton:'去死吧',
+                cancelButton:'再想想',
+                action:(res)=>{
+                    if(res == 'confirm'){
+                        this.$message("删除成功");
+                    }else{
+                        this.$confirm({
+                            action:(res)=>{
+                                console.log(res);
+                            }
+                        })
+                    }
+                }
+            })
         }
     }
 }

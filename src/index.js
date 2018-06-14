@@ -6,7 +6,8 @@ import Pagination from './components/pagination/pagination.vue'
 import Model from './components/model/model.vue'
 import Switch from './components/switch/switch.vue'
 import Checkbox from './components/checkbox/checkbox.vue'
-import Message from './components/message/message.js'
+import Message from './components/message/main.js'
+import MessageBox from './components/message-box/main.js'
 
 const IngtubeComponents = {
     install(Vue,options){
@@ -20,6 +21,7 @@ const IngtubeComponents = {
         Vue.component(Model.name,Model);
         
         Vue.prototype.$message = Message;
+        Vue.prototype.$confirm = MessageBox.confirm;
     }
     
 }
