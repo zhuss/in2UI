@@ -106,7 +106,7 @@ export default {
                     }else{
                         this.$confirm({
                             action:(res)=>{
-                                console.log(res);
+                                 this.$message("好吧");
                             }
                         })
                     }

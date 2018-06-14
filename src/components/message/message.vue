@@ -17,6 +17,10 @@ export default {
         this.isShow = true;
         setTimeout(()=>{
             this.isShow = false;
+            setTimeout(()=>{
+                this.$destroy();
+                this.$el.remove();
+            },300);
         },3000);
     }
 }
@@ -27,19 +31,19 @@ export default {
 }
 .fade-enter, .fade-leave-to {
     opacity: 0;
+    transform: translateY(-50%);
 }
 .in-message{
     position: fixed;
-    top: 30px;
-    left: 50%;
-    transform: translateX(-50%);
+    top: 0;
+    left: 0;
     box-sizing: border-box;
-    padding:10px 30px;
-    min-width: 200px;
+    padding:15px 30px;
+    width: 100%;
     background: #25b864;
     color: #FFF;
-    border-radius:2px;
     overflow: hidden;
+    border-bottom:1px solid #FFF;
 }
 </style>
 
