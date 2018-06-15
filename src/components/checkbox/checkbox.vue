@@ -51,6 +51,7 @@ export default {
         height: 30px;
         cursor: pointer;
         z-index: 1;
+        opacity: 0;
         &+.in-checkbox-ponit{
             position: relative;
             display: block;

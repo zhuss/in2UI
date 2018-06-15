@@ -8,6 +8,9 @@ export default {
 }
 </script>
 <style lang="less">
+body{
+    -webkit-tap-highlight-color: transparent;
+}
 body,h1,h2,h3,p{
   margin: 0;
   padding: 0;
