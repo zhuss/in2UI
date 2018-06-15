@@ -8,13 +8,14 @@ const MessageBox  = function(){
 }
 
 MessageBox.confirm = (option)=>{
+    option = option||{};
     let instance = new MessageBoxConstructor({
         data:{
             title:option.title||'标题',
             text:option.text||'消息内容',
             confirmButton:option.confirmButton||'确认',
             cancelButton:option.cancelButton||'取消',
-            action:option.action
+            action:option.action||function(res){return false}
         }
     });
     instance.vm = instance.$mount();
