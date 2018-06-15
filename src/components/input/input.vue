@@ -25,6 +25,11 @@ export default {
             default:'off'
         }
     },
+    watch:{
+        value(value){
+            this.currentValue = value;
+        }
+    },
     data(){
         return {
             currentValue:this.value

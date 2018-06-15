@@ -26,7 +26,19 @@
                     </in-input>
                 </div>
                 <div class="demo-input">
-                    <in-input disabled  v-model="form.number"></in-input>
+                    <in-input disabled  v-model="form.text"></in-input>
+                </div>
+            </div>
+            <h2 class="demo-title">数字输入框</h2>
+            <div class="demo-body">
+                <div class="demo-input">
+                    <in-number v-model="form.number" :step="5" :min="1" :max="100"></in-number>
+                </div>
+                <div class="demo-input">
+                    <in-number v-model="form.number"></in-number>
+                </div>
+                <div class="demo-input">
+                    <in-number disabled v-model="form.number"></in-number>
                 </div>
             </div>
              <h2 class="demo-title">文本输入框</h2>

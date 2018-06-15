@@ -1,5 +1,6 @@
 import Button from './components/button/button.vue'
 import Input from './components/input/input.vue'
+import InputNumber from './components/number/number.vue'
 import Textarea from './components/textarea/textarea.vue'
 import Select from './components/select/select.vue'
 import Pagination from './components/pagination/pagination.vue'
@@ -13,6 +14,7 @@ const IngtubeComponents = {
     install(Vue,options){
         Vue.component(Button.name,Button);
         Vue.component(Input.name,Input);
+        Vue.component(InputNumber.name,InputNumber);
         Vue.component(Switch.name,Switch);
         Vue.component(Checkbox.name,Checkbox);
         Vue.component(Textarea.name,Textarea);

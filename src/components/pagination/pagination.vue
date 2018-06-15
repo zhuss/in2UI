@@ -84,6 +84,7 @@ export default {
         box-sizing: border-box;
         border: 1px solid @secondaryColor;
         border-radius:2px; 
+        color: @regularColor;
         cursor: pointer;
     }
     .in-pagination-item:nth-child(n-2){
@@ -96,6 +97,7 @@ export default {
     }
     .in-pagination-disabled{
         opacity: .6;
+        cursor: not-allowed;
     }
 }
 </style>
