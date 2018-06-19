@@ -15,7 +15,7 @@ export default {
     name:'InNumber',
     props:{
         value:{
-            type:Number,
+            type:[Number,String],
             default:0
         },
         disabled:Boolean,
@@ -60,12 +60,17 @@ export default {
             this.$emit('input',this.currentValue*1);
         },
         handleInput(e){
-            let value =  this.currentValue*1;
-            if(value < this.min){
-                value = this.min
-            }
-            if(value > this.max){
-                value = this.max
+            let value = '';
+            if(this.currentValue == ''){
+                value = '';
+            }else{
+                value =  this.currentValue*1;
+                if(value < this.min){
+                    value = this.min
+                }
+                if(value > this.max){
+                    value = this.max
+                }
             }
             this.$emit('input',value);
         },
