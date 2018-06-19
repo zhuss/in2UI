@@ -1,12 +1,16 @@
 <template>
     <div class="in-number">
         <button :disabled="disabled||currentValue<=min" class="in-number-button" type="button" @click="buttonClick(-step)">－</button>
-        <input :disabled="disabled" class="in-number-input"
-               type="text" 
-               v-model="currentValue" 
-               @input="handleInput" 
-               @keydown="keydown"
-               @blur="blur">
+        <input :disabled="disabled"
+               autocomplete="off"
+               class="in-number-input"
+               type="text"
+               @input="handleInput"
+               @focus="handleFocus" 
+               @blur="handleBlur"
+               @change="handleChange"
+               :value="currentValue"
+               spellcheck="false">
         <button :disabled="disabled||currentValue>=max" class="in-number-button" type="button" @click="buttonClick(step)">＋</button>
     </div>
 </template>
@@ -23,8 +27,14 @@ export default {
             type:Number,
             default:1
         },
-        min:Number,
-        max:Number
+        min:{
+            type:Number,
+            default:-999999999999999
+        },
+        max:{
+            type:Number,
+            default:999999999999999
+        }
     },
     watch:{
         value(value){
@@ -37,15 +47,31 @@ export default {
         }   
     },
     methods:{
-        keydown(e){
-            if(e.key != 'Backspace'&&e.key!='ArrowLeft'&&e.key!='ArrowRight'){
-                let number = this.currentValue +''+ e.key;
-                if(number*1+'' === number){
-                    this.currentValue = number;
+        handleInput(e){
+            let val = event.target.value.trim();
+            if(val == ''|| val == '-'){
+                this.currentValue = val;
+                this.$emit('input',this.currentValue);
+            }else{
+                val = Number(val);
+                if(!isNaN(val)&&val<=999999999999999&&val>=-999999999999999){
+                    event.target.value = val;
+                    this.currentValue = val;
+                    this.$emit('input',this.currentValue);
                 }else{
-                    e.preventDefault();
+                    event.target.value = this.currentValue;
                 }
             }
+            
+        },
+        handleFocus(e){
+            this.$emit('focus',e);
+        },
+        handleBlur(e){
+            this.$emit('blur',e);
+        },
+        handleChange(e){
+            this.$emit('change',e);
         },
         buttonClick(number){
             let value =  this.currentValue*1+number;
@@ -56,26 +82,7 @@ export default {
                 value = this.max
             }
             this.currentValue  = value;
-            
             this.$emit('input',this.currentValue*1);
-        },
-        handleInput(e){
-            let value = '';
-            if(this.currentValue == ''){
-                value = '';
-            }else{
-                value =  this.currentValue*1;
-                if(value < this.min){
-                    value = this.min
-                }
-                if(value > this.max){
-                    value = this.max
-                }
-            }
-            this.$emit('input',value);
-        },
-        blur(e){
-          this.$emit('blur',e);
         }
     }
 }
