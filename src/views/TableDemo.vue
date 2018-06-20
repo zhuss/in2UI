@@ -7,6 +7,7 @@
                     <th>主要渠道</th>
                     <th>邀请码</th>
                     <th>审核状态</th>
+                    <th width="200">操作</th>
                 </tr>
             </thead>
             <tbody>
@@ -15,6 +16,10 @@
                     <td>{{item.plat}}</td>
                     <td>{{item.code}}</td>
                     <td>{{item.status}}</td>
+                    <td>
+                        <in-button type="primary" @click="passClick">通过</in-button>
+                        <in-button @click="refuseClick">拒绝</in-button>
+                    </td>
                 </tr>
             </tbody>
         </in-table>
@@ -59,6 +64,26 @@ export default {
                 code:'INGVIP9',
                 status:'待审核'
             }]
+        }
+    },
+    methods:{
+        passClick(){
+            this.$message("审核通过");
+        },
+        refuseClick(){
+            this.$confirm({
+                title:'温馨提示',
+                text:'是否拒绝该博主的申请',
+                confirmButton:'确定',
+                cancelButton:'取消',
+                action:(res)=>{
+                    if(res == 'confirm'){
+                        this.$message("操作成功");
+                    }else{
+                        return false;
+                    }
+                }
+            })
         }
     }
 }

@@ -1,7 +1,5 @@
 <template>
-    <transition name="fade">
-        <div class="in-message" v-show="isShow" :style="{'z-index':zIndex}">{{text}}</div>
-    </transition>
+    <div class="in-message" :class="{'in-message-active':isShow}" :style="{'z-index':zIndex}">{{text}}</div>
 </template>
 <script>
 import {getMaxZindex} from '../../utils/dom.js'
@@ -21,29 +19,31 @@ export default {
                 this.$destroy();
                 this.$el.remove();
             },300);
-        },2000);
+        },3000);
     }
 }
 </script>
 <style lang="less" scoped>
 @import '../../assets/css/base';
-.fade-enter-active, .fade-leave-active {
-   transition: all .3s
-}
-.fade-enter, .fade-leave-to {
-    opacity: 0;
-    transform: translateY(-50%);
-}
 .in-message{
     position: fixed;
-    top: 0;
-    left: 0;
+    top: 30px;
+    left: 50%;
+    transform:translateX(-50%) translateY(-30px);
     box-sizing: border-box;
     padding:15px 30px;
-    width: 100%;
-    background: @secondaryColor;
+    min-width: 300px;
+    background: #F5FBF8;
+    border: 1px solid #EAEAEA;
     color: @regularColor;
+    border-radius:5px; 
     overflow: hidden;
+    transition: all .3s;
+    opacity: 0;
+}
+.in-message-active{
+    opacity: 1;
+    transform:translateX(-50%) translateY(0);
 }
 </style>
 
