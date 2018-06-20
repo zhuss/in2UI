@@ -21,11 +21,12 @@ export default {
                 this.$destroy();
                 this.$el.remove();
             },300);
-        },3000);
+        },2000);
     }
 }
 </script>
 <style lang="less" scoped>
+@import '../../assets/css/base';
 .fade-enter-active, .fade-leave-active {
    transition: all .3s
 }
@@ -40,10 +41,9 @@ export default {
     box-sizing: border-box;
     padding:15px 30px;
     width: 100%;
-    background: #25b864;
-    color: #FFF;
+    background: @secondaryColor;
+    color: @regularColor;
     overflow: hidden;
-    border-bottom:1px solid #FFF;
 }
 </style>
 

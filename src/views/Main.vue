@@ -1,142 +1,86 @@
 <template>
-    <div class="view-main">
-        <!-- 按钮 -->
-        <div class="demo-block">
-            <h2 class="demo-title">普通按钮</h2>
-            <div class="demo-body">
-                <in-button @click="clickOne">默认按钮</in-button>
-                <in-button  @click="primaryClick" type="primary">主要按钮</in-button>
-
-                <in-button round @click="confirmClick">圆角按钮</in-button>
-                <in-button round type="primary">圆角按钮</in-button>
-
-                <in-button :disabled="true">默认按钮</in-button>
-                <in-button disabled type="primary">主要按钮</in-button>
+    <div class="page-main">
+        <div class="main-top">
+            <div class="main-title">ingtubeUI</div>
+            <div class="main-login">
+                <router-link :to="{name:'login'}">退出登录</router-link>
             </div>
         </div>
-        <!-- /按钮 -->
-        <div class="demo-block">
-            <h2 class="demo-title">输入框</h2>
-            <div class="demo-body">
-                <div class="demo-input">
-                    <in-input v-model="form.text"
-                              @focus="focus"
-                              @blur="blur"
-                              @change="change">
-                    </in-input>
-                </div>
-                <div class="demo-input">
-                    <in-input disabled  v-model="form.text"></in-input>
+        <div class="main-body">
+            <div class="main-left">
+                <div class="nav">
+                    <router-link class="nav-item" :class="{'nav-active':$route.name=='demo'}" :to="{name:'demo'}">案例合集</router-link>
+                    <router-link class="nav-item" :class="{'nav-active':$route.name=='model'}" :to="{name:'model'}">模态案例</router-link>
                 </div>
             </div>
-            <h2 class="demo-title">数字输入框</h2>
-            <div class="demo-body">
-                <div class="demo-input">
-                    <in-number v-model="form.number" :step="5" :min="1" :max="100"></in-number>
-                </div>
-                <div class="demo-input">
-                    <in-number v-model="form.number"></in-number>
-                </div>
-                <div class="demo-input">
-                    <in-number disabled v-model="form.number"></in-number>
-                </div>
-            </div>
-             <h2 class="demo-title">文本输入框</h2>
-            <div class="demo-body">
-                <div class="demo-input">
-                    <in-textarea v-model="form.textArea"
-                                 @change="textareaChange"
-                                 @blur="textareaBlur"></in-textarea>
-                </div>
-                <div class="demo-input">
-                    <in-textarea disabled v-model="form.textArea"></in-textarea>
-                </div>
+            <div class="main-content">
+                <router-view/>
             </div>
         </div>
-
-        <select-demo></select-demo>
-
-        <pagination-demo></pagination-demo>
-
-        <model-demo></model-demo>
-
-        <switch-demo></switch-demo>
     </div>
 </template>
-<script>
-import SelectDemo from './SelectDemo'
-import PaginationDemo from './PaginationDemo'
-import ModelDemo from './ModelDemo'
-import SwitchDemo from './SwitchDemo'
-export default {
-    components:{
-        SelectDemo,
-        PaginationDemo,
-        ModelDemo,
-        SwitchDemo
-    },
-    data(){
-        return {
-            form:{
-                text:'输入框文字',
-                number:10,
-                textArea:'喵喵喵'
+<style lang="less" scoped>
+.page-main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    >.main-top{
+        width: 100%;
+        height: 60px;
+        background: #25b864;
+        display: flex;
+        >.main-title{
+            flex: 1;
+            padding: 10px 20px;
+            height: 40px;
+            line-height: 40px;
+            font-size: 20px;
+            color: #FFF;
+        }
+        >.main-login{
+            padding: 10px 20px;
+            height: 40px;
+            line-height: 40px;
+            a{
+               text-decoration: none;
+               color: #414141;
+               &:hover{
+                   color: #666;
+               }
             }
         }
-    },
-    methods:{
-        clickOne(e){
-            this.$message(JSON.stringify(this.form));
-        },
-        focus(e){
-            console.log(e.type);
-        },
-        blur(e){
-            console.log(e.type);
-        },
-        change(e){
-            console.log(e.type);
-        },
-        textareaChange(e){
-            console.log(e.type);
-        },
-        textareaBlur(e){
-            console.log(e.type);
-        },
-        primaryClick(){
-            this.$message("这是一条消息提示");
-        },
-        confirmClick(e){
-            this.$confirm({
-                title:'温馨提示',
-                text:'确认从记忆里删除吗？',
-                confirmButton:'去死吧',
-                cancelButton:'再想想',
-                action:(res)=>{
-                    if(res == 'confirm'){
-                        this.$message("删除成功");
-                    }else{
-                        this.$confirm({
-                            action:(res)=>{
-                                 this.$message("好吧");
-                            }
-                        })
+    }
+    >.main-body{
+        flex: 1;
+        display: flex;
+        >.main-left{
+            width: 200px;
+            height: 100%;
+            background: #EEE;
+            >.nav{
+                >.nav-item{
+                    padding: 0  20px;
+                    height: 50px;
+                    line-height: 50px;
+                    display: block;
+                    text-decoration: none;
+                    color: #333;
+                    &:hover{
+                        background: #CCC;
                     }
                 }
-            })
+                >.nav-active{
+                    color: #25b864;
+                }
+            }
         }
-    }
-}
-</script>
-<style lang="less" scoped>
-.view-main{
-    padding: 0 40px;
-    .demo-input{
-        display: inline-block;
-        vertical-align: top;
-        width: 300px;
+        >.main-content{
+            flex: 1;
+            overflow: auto;
+            padding: 10px;
+        }
     }
 }
 </style>
-
 
