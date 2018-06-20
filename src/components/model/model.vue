@@ -1,6 +1,6 @@
 <template>
     <transition name="fade">
-        <div class="in-model" v-show="value" :style="{'z-index':zIndex}">
+        <div class="in-model" v-show="value" :style="{'z-index':zIndex}" @click.self="close">
             <div class="in-model-panel">
                 <div class="in-model-title">
                     <div class="in-model-text">{{title}}</div>

@@ -1,11 +1,15 @@
 <template>
     <div class="in-select" v-clickOutSide="clickOutSide">
-      <div class="in-select-arrow-down"></div>
+      <div class="in-select-arrow-down" @click="focus"></div>
       <input :disabled="disabled"  v-model="currentValue" class="in-select-input" readonly type="text" placeholder="请选择" @focus="focus">
-      <div class="in-select-panel" :style="{'z-index':zIndex}" v-show="isShow">
-          <div class="in-select-item" :class="{'inselect-item__selected':item==currentValue}" v-for="item in select" @click="itemClick(item)">{{item}}</div>
-      </div>
-      <div class="in-select-arrow" v-show="isShow" :style="{'z-index':zIndex}" ></div>
+      <transition name="fade">
+        <div class="in-select-panel" :style="{'z-index':zIndex}" v-show="isShow">
+            <div class="in-select-arrow" :style="{'z-index':zIndex}" ></div>
+            <div class="in-select-scroll">
+                <div class="in-select-item" :class="{'inselect-item__selected':item==currentValue}" v-for="item in select" @click="itemClick(item)">{{item}}</div>
+            </div>
+        </div>
+      </transition>
     </div>
 </template>
 <script>
@@ -61,6 +65,13 @@ export default {
 </script>
 <style lang="less" scoped>
 @import '../../assets/css/base';
+.fade-enter-active, .fade-leave-active {
+   transition: all .3s
+}
+.fade-enter, .fade-leave-to {
+    opacity: 0;
+    transform: translateY(5px);
+}
 .in-select{
     display: inline-block;
     width: 100%;
@@ -76,19 +87,7 @@ export default {
         top: 12px;
         z-index: 1;
         transform: rotate(-45deg);
-    }
-    >.in-select-arrow{
-        position: absolute;
-        left: 50%;
-        top: 45px;
-        transform:translateX(-5px) rotate(-45deg);
-        content: '';
-        display: block;
-        width: 10px;
-        height: 10px;
-        border-top:1px solid @secondaryColor;
-        border-right:1px solid @secondaryColor;
-        background: #FFF;
+        cursor: pointer;
     }
     >.in-select-input{
         position: absolute;
@@ -113,26 +112,51 @@ export default {
         top: 50px;
         box-sizing: border-box;
         width: 100%;
-        padding: 10px 0;
         border: 1px solid @secondaryColor;
         border-radius: 2px;
-        max-height: 200px;
-        overflow-y: auto;
         background: #FFF;
-        >.in-select-item{
-            padding: 0 30px;
-            line-height: 30px;
-            font-size: 14px;
-            cursor: pointer;
-            &:hover{
-                background: #EEE;
+        >.in-select-arrow{
+            position: absolute;
+            left: 50%;
+            top: -10px;
+            transform:translateX(-5px);
+            width: 0;
+            height: 0;
+            border-bottom:10px solid @secondaryColor;
+            border-left:10px solid transparent;
+            border-right:10px solid transparent;
+            &::after{
+                position: absolute;
+                left: -9px;
+                top: 1px;
+                content: '';
+                display: block;
+                width: 0;
+                height: 0;
+                border-bottom:9px solid #FFF;
+                border-left:9px solid transparent;
+                border-right:9px solid transparent;
             }
         }
-        >.inselect-item__selected{
-            color: @primaryColor;
+        >.in-select-scroll{
+            padding: 10px 0;
+            max-height: 200px;
+            overflow-y: auto;
+            >.in-select-item{
+                padding: 0 30px;
+                line-height: 30px;
+                font-size: 14px;
+                cursor: pointer;
+                &:hover{
+                    background: #EEE;
+                }
+            }
+            >.inselect-item__selected{
+                color: @primaryColor;
+            }
         }
     }
-    .in-select-panel::-webkit-scrollbar{
+    .in-select-scroll::-webkit-scrollbar{
         width: 2px;
         height: 2px;
     }
