@@ -6,6 +6,7 @@ import Login from '../views/Login.vue'
 import Demo from '../views/Demo.vue'
 import Model from '../views/ModelDemo.vue'
 import Table from '../views/TableDemo.vue'
+import Nav from '../views/NavDemo.vue'
 
 
 Vue.use(Router)
@@ -30,6 +31,10 @@ export default new Router({
         path:'table',
         name:'table',
         component:Table
+      },{
+        path:'nav',
+        name:'nav',
+        component:Nav
       }]
     },{
       path: '/login',

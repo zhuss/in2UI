@@ -12,6 +12,7 @@
                     <router-link class="nav-item" :class="{'nav-active':$route.name=='demo'}" :to="{name:'demo'}">案例合集</router-link>
                     <router-link class="nav-item" :class="{'nav-active':$route.name=='model'}" :to="{name:'model'}">模态案例</router-link>
                     <router-link class="nav-item" :class="{'nav-active':$route.name=='table'}" :to="{name:'table'}">表格案例</router-link>
+                    <router-link class="nav-item" :class="{'nav-active':$route.name=='nav'}" :to="{name:'nav'}">导航案例</router-link>
                 </div>
             </div>
             <div class="main-content">
