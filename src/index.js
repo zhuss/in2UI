@@ -7,6 +7,7 @@ import Pagination from './components/pagination/pagination.vue'
 import Model from './components/model/model.vue'
 import Switch from './components/switch/switch.vue'
 import Checkbox from './components/checkbox/checkbox.vue'
+import Radio from './components/radio/radio.vue'
 import Table from './components/table/Table.vue'
 import Message from './components/message/main.js'
 import MessageBox from './components/message-box/main.js'
@@ -18,6 +19,7 @@ const IngtubeComponents = {
         Vue.component(InputNumber.name,InputNumber);
         Vue.component(Switch.name,Switch);
         Vue.component(Checkbox.name,Checkbox);
+        Vue.component(Radio.name,Radio);
         Vue.component(Textarea.name,Textarea);
         Vue.component(Select.name,Select);
         Vue.component(Pagination.name,Pagination);
