@@ -1,6 +1,6 @@
 <template>
     <div class="in-radio">
-        <input class="in-radio-input" :class="{'in-radio-input-checked':currentValue==label}" type="radio" v-model="currentValue" :value="label" @change="change">
+        <input :disabled="disabled" class="in-radio-input" :class="{'in-radio-input-checked':currentValue==label}" type="radio" v-model="currentValue" :value="label" @change="change">
         <span class="in-radio-ponit"></span>
     </div>
 </template>
@@ -9,7 +9,8 @@ export default {
     name:'InRadio',
     props:{
         value:[String,Number],
-        label:[String,Number]
+        label:[String,Number],
+        disabled:Boolean
     },
     watch:{
         value(val){

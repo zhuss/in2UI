@@ -26,6 +26,7 @@
     height: 100%;
     display: flex;
     flex-flow: column;
+    overflow: hidden;
     >.main-top{
         width: 100%;
         height: 60px;
@@ -67,8 +68,9 @@
                     display: block;
                     text-decoration: none;
                     color: #333;
+                    transition: all .3s;
                     &:hover{
-                        background: #CCC;
+                        background: #EAEAEA;
                     }
                 }
                 >.nav-active{

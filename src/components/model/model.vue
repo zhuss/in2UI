@@ -49,17 +49,25 @@ export default {
   opacity: 0;
   transform: scale(1.2);
 }
+.in-model::-webkit-scrollbar{
+    width: 0;
+    height: 0;
+}
 .in-model{
     position: fixed;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
+    padding: 30px;
+    box-sizing: border-box;
     background: rgba(0,0,0,.5);
     display: flex;
+    justify-content: center;
     align-items: center;
+    overflow-y: auto;
     >.in-model-panel{
-        margin: 0 auto;
+        margin:auto;
         width: 500px;
         height: auto;
         background: #FFF;

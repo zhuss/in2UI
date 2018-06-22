@@ -28,6 +28,7 @@ export default {
     td{
         padding:15px;
         color: @regularColor;
+        font-size: 14px;
     }
 }
 </style>
