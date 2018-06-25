@@ -25,6 +25,7 @@ export default {
         handleItemClick(item){
            this.activeIndex = item;
            bus.$emit('changeIndex',this.activeIndex);
+           this.$emit('select',this.activeIndex);
         }
     }
 }
