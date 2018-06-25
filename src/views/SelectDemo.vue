@@ -31,10 +31,10 @@ export default {
     },
     methods:{
         btnClick(){
-            alert(JSON.stringify(this.form));
+            this.$message(JSON.stringify(this.form));
         },
-        change(){
-            console.log('change');
+        change(e){
+            this.$message('change:'+this.form.select1);
         }
     }
 }

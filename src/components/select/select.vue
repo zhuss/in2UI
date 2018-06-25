@@ -54,11 +54,11 @@ export default {
         },
         itemClick(item){
             this.isShow = false;
+            this.$emit('input',item);
             if(this.currentValue!= item){
+                this.currentValue = item;
                 this.$emit('change',item);
             }
-            this.currentValue = item;
-            this.$emit('input',item);
         }
     }
 }
