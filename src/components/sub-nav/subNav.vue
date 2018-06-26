@@ -7,8 +7,10 @@
     </div>
 </template>
 <script>
+import Emitter from '../../utils/emitter.js'
 export default {
     name:'InSubNav',
+    mixins: [Emitter],
     props:{
         title:String,
         active:Boolean
@@ -20,9 +22,16 @@ export default {
         }
     },
     mounted(){
+        this.$on('item-click', this.handleItemClick);
         this.$nextTick(()=>{
            this.height = 50*this.$refs.warp.querySelectorAll(".in-nav-item").length;
+           
         });
+    },
+    methods:{
+        handleItemClick(index){
+             this.dispatch('InNav','item-click',index);
+        }
     }
 }
 </script>

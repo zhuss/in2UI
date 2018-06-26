@@ -8,12 +8,14 @@
             <span>{{form.isShow}}</span>
         </div>
         <div class="demo-body">
-            <span>是否喜欢前端:</span>
-            <in-checkbox v-model="form.checkbox"></in-checkbox>
-            <span>是否喜欢后端:</span>
-            <in-checkbox v-model="form.checkbox"></in-checkbox>
-            <span>是否喜欢我:</span>
-            <in-checkbox disabled v-model="form.checkbox2"></in-checkbox>
+            <in-checkbox v-model="form.checkbox" label="是否喜欢前端"></in-checkbox>
+            <in-checkbox v-model="form.checkbox" label="是否喜欢后端"></in-checkbox>
+            <in-checkbox disabled v-model="form.checkbox2" label="是否喜欢我"></in-checkbox>
+        </div>
+        <div class="demo-body">
+            <in-checkbox-group v-model="form.hobby">
+                <in-checkbox v-for="item in hobbyList" :key="item" :label="item"></in-checkbox>
+            </in-checkbox-group>
         </div>
         <div class="demo-body">
             <in-radio v-model="form.gender" :label="1"></in-radio>男
@@ -29,11 +31,13 @@
 export default {
     data(){
         return {
+            hobbyList:["篮球","羽毛球","排球","乒乓球"],
             form:{
                 isShow:true,
                 checkbox:false,
                 checkbox2:true,
-                gender:0
+                gender:0,
+                hobby:[]
             }
         }
     },

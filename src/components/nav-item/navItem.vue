@@ -4,9 +4,10 @@
     </div>
 </template>
 <script>
-import bus from '../../utils/bus.js'
+import Emitter from '../../utils/emitter.js'
 export default {
     name:'InNavItem',
+    mixins: [Emitter],
     props:{
         index:String
     },
@@ -15,15 +16,16 @@ export default {
              activeIndex:''
         }
     },
-    mounted(){
-            bus.$on('changeIndex', this.changeIndex);
+    created(){
+        this.$on('change',this.change);
     },
     methods:{
         itemClick(){
-           bus.$emit('item-click',this.index);
+            this.dispatch('InSubNav','item-click',this.index);
+            this.dispatch('InNav','item-click',this.index);
         },
-        changeIndex(index){
-            this.activeIndex = index
+        change(index){
+            this.activeIndex = index;
         }
     }
 }

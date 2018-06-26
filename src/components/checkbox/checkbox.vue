@@ -2,13 +2,17 @@
     <div class="in-checkbox">
         <input :disabled="disabled" class="in-checkbox-input" v-model="currentValue" type="checkbox" @change="change">
         <span class="in-checkbox-ponit"></span>
+        <span class="in-checkbox-text">{{label}}</span>
     </div>
 </template>
 <script>
+import Emitter from '../../utils/emitter.js'
 export default {
     name:'InCheckbox',
+    mixins: [Emitter],
     props:{
         value:Boolean,
+        label:String,
         disabled:Boolean
     },
     watch:{
@@ -23,6 +27,7 @@ export default {
     },
     methods:{
         change(e){
+            this.dispatch('InCheckboxGroup', 'change', this.label);
             this.$emit('input', this.currentValue);
             this.$emit('change', e);
         }
@@ -34,11 +39,13 @@ export default {
 .in-checkbox{
     display: inline-block;
     vertical-align:middle;
-    width: 40px;
     height: 40px;
     padding: 5px;
     box-sizing: border-box;
     position: relative;
+    >.in-checkbox-text{
+        vertical-align: middle;
+    }
     >.in-checkbox-input{
         position: absolute;
         left: 5px;
@@ -47,16 +54,17 @@ export default {
         outline: none;
         margin: 0;
         padding: 0;
-        width: 30px;
+        width: 100%;
         height: 30px;
         cursor: pointer;
         z-index: 1;
         opacity: 0;
         &+.in-checkbox-ponit{
             position: relative;
-            display: block;
-            width: 100%;
-            height: 100%;
+            display: inline-block;
+            vertical-align: middle;
+            width: 30px;
+            height: 30px;
             background: #FFF;
             border: 1px solid @secondaryColor;
             border-radius:2px; 
