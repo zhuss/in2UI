@@ -14,7 +14,9 @@
                     <in-input></in-input>
                 </div>
                 <div class="form-item">
-                    <in-select v-model="select" :select="selectArray"></in-select>
+                    <in-select v-model="select">
+                        <in-option v-for="item in selectArray" :key="item" :label="item" :value="item"></in-option>
+                    </in-select>
                 </div>
                 <div class="form-item">
                     <in-button type="primary" @click="loginClick">登录</in-button>
@@ -34,7 +36,7 @@ export default {
         return {
             isShow:false,
             isShow2:false,
-            select:'管理员',
+            select:'',
             selectArray:['超级管理员','管理员','普通员工']
         }
     },
