@@ -130,7 +130,7 @@ export default {
 </script>
 <style lang="less" scoped>
 .view-main{
-    padding: 0 40px;
+    padding: 0;
     .demo-input{
         display: inline-block;
         vertical-align: top;

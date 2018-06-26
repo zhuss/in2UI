@@ -13,6 +13,7 @@
                     <in-nav-item index="model">模态案例</in-nav-item>
                     <in-nav-item index="table">表格案例</in-nav-item>
                     <in-nav-item index="nav">导航案例</in-nav-item>
+                    <in-nav-item index="form">表单案例</in-nav-item>
                 </in-nav>
             </div>
             <div class="main-content">

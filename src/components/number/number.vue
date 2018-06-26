@@ -117,6 +117,8 @@ export default {
         display: block;
         outline: none;
         padding: 0 30px;
+        box-sizing: border-box;
+        width: 10%;
         flex: 1;
         border: none;
         border-left:1px solid  @secondaryColor;

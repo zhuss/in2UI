@@ -2,7 +2,8 @@
     <div class="in-checkbox">
         <input :disabled="disabled" class="in-checkbox-input" v-model="currentValue" type="checkbox" @change="change">
         <span class="in-checkbox-ponit"></span>
-        <span class="in-checkbox-text">{{label}}</span>
+        <span class="in-checkbox-text" v-if="$slots.default"><slot></slot></span>
+        <span class="in-checkbox-text" v-else>{{label}}</span>
     </div>
 </template>
 <script>
@@ -12,7 +13,7 @@ export default {
     mixins: [Emitter],
     props:{
         value:Boolean,
-        label:String,
+        label:[String,Number],
         disabled:Boolean
     },
     watch:{
@@ -55,8 +56,13 @@ export default {
     padding: 5px;
     box-sizing: border-box;
     position: relative;
+    & + .in-checkbox{
+        margin-left: 20px;
+    }
     >.in-checkbox-text{
         vertical-align: middle;
+        color: @regularColor;
+        font-size: 14px;
     }
     >.in-checkbox-input{
         position: absolute;

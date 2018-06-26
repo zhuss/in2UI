@@ -94,6 +94,8 @@ export default {
     line-height: 24px;
     >p{
         word-break: break-all;
+        font-size: 14px;
+        color: @regularColor;
     }
 }
 .in-textarea[contenteditable='false']{

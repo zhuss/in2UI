@@ -7,6 +7,7 @@ import Demo from '../views/Demo.vue'
 import Model from '../views/ModelDemo.vue'
 import Table from '../views/TableDemo.vue'
 import Nav from '../views/NavDemo.vue'
+import Form from '../views/FormDemo.vue'
 
 
 Vue.use(Router)
@@ -17,6 +18,10 @@ export default new Router({
       component: Login
     },
     {
+      path: '/login',
+      name: 'login',
+      component: Login
+    },{
       path: '/',
       component: Main,
       children:[{
@@ -35,11 +40,11 @@ export default new Router({
         path:'nav',
         name:'nav',
         component:Nav
+      },{
+        path:'form',
+        name:'form',
+        component:Form
       }]
-    },{
-      path: '/login',
-      name: 'login',
-      component: Login
     }
   ]
 })
