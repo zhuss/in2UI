@@ -17,6 +17,10 @@ export default {
         }
     },
     mounted(){
+        if(this.active){
+            this.broadcast('InNavItem','change',this.active);
+            this.broadcast('InSubNav','change',this.active);
+        }
         this.$on('item-click', this.handleItemClick);
     },
     methods:{

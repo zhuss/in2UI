@@ -1,7 +1,7 @@
 <template>
     <div class="demo-block">
         <div class="demo-nav">
-            <in-nav active="1" @select="select">
+            <in-nav active="2-1" @select="select">
                 <in-nav-item index="1">一级导航</in-nav-item>
                 <in-sub-nav title="二级导航1">
                     <in-nav-item index="2-1">选项一</in-nav-item>

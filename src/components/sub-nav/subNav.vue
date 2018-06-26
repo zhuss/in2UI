@@ -1,7 +1,7 @@
 <template>
     <div class="in-sub-nav">
         <div class="in-sub-title"  @click="isOpen=!isOpen">{{title}}</div>
-        <div ref="warp" class="in-sub-warp" :style="{height:isOpen?height+'px':'0px'}">
+        <div class="in-sub-warp" :style="{height:isOpen?height+'px':'0px'}">
             <slot></slot>
         </div>
     </div>
@@ -12,25 +12,38 @@ export default {
     name:'InSubNav',
     mixins: [Emitter],
     props:{
-        title:String,
-        active:Boolean
+        title:String
     },
     data(){
         return {
-            isOpen:this.active,
+            isOpen:false,
             height:0
         }
     },
+    computed:{
+        indexList(){
+            let list = [];
+            for(let i = 0; i < this.$children.length; i++){
+                list.push(this.$children[i].index);
+            }
+            return list;
+        }
+    },
+    created(){
+        this.$on('change',this.change);
+    },
     mounted(){
         this.$on('item-click', this.handleItemClick);
-        this.$nextTick(()=>{
-           this.height = 50*this.$refs.warp.querySelectorAll(".in-nav-item").length;
-           
-        });
+        this.height = 50*this.$children.length;
     },
     methods:{
         handleItemClick(index){
              this.dispatch('InNav','item-click',index);
+        },
+        change(index){
+           if(this.indexList.indexOf(index)>-1){
+               this.isOpen = true;
+           }
         }
     }
 }
