@@ -25,7 +25,17 @@ export default {
             currentValue:this.value
         }
     },
+    mounted(){
+        this.$on('init',this.initData);
+    },
     methods:{
+        //初始化数据
+        initData(value){
+            let valueList = value.value;
+            if(valueList.indexOf(this.label) > -1){
+                this.currentValue = true;
+            }
+        },
         change(e){
             this.dispatch('InCheckboxGroup', 'change', this.label);
             this.$emit('input', this.currentValue);

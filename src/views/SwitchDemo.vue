@@ -37,7 +37,7 @@ export default {
                 checkbox:false,
                 checkbox2:true,
                 gender:0,
-                hobby:[]
+                hobby:["羽毛球"]
             }
         }
     },

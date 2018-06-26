@@ -27,7 +27,8 @@ export default {
         }
     },
     mounted(){
-        this.$on('change',this.change)
+        this.$on('change',this.change);
+        this.broadcast('InCheckbox','init',{value:this.currentValue});
     },
     methods:{
         change(item){
