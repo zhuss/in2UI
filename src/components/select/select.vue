@@ -1,12 +1,12 @@
 <template>
     <div class="in-select" v-clickOutSide="clickOutSide">
       <div class="in-select-arrow-down" @click="focus"></div>
-      <input :disabled="disabled"  v-model="currentValue" class="in-select-input" readonly type="text" placeholder="请选择" @focus="focus">
+      <input :disabled="disabled"  v-model="label" class="in-select-input" readonly type="text" placeholder="请选择" @focus="focus">
       <transition name="fade">
         <div class="in-select-panel" :style="{'z-index':zIndex}" v-show="isShow">
             <div class="in-select-arrow" :style="{'z-index':zIndex}" ></div>
             <div class="in-select-scroll">
-                <div class="in-select-item" :class="{'inselect-item__selected':item==currentValue}" v-for="item in select" @click="itemClick(item)">{{item}}</div>
+                <slot></slot>
             </div>
         </div>
       </transition>
@@ -15,30 +15,34 @@
 <script>
 import {getMaxZindex} from '../../utils/dom.js'
 import clickOutSide from '../directives/clickOutside.js'
+import Emitter from '../../utils/emitter.js'
 export default {
     name:'InSelect',
+    mixins:[Emitter],
     directives:{
         clickOutSide
     },
     props:{
         value:[String,Number],
-        disabled: Boolean,
-        select:{
-            type:Array,
-            default:[]
-        }
+        disabled: Boolean
     },
     data(){
         return {
             zIndex:1,
             isShow:false,
-            currentValue:this.value
+            currentValue:this.value,
+            label:''
         }
     },
     watch:{
         value(value){
             this.currentValue = value;
+            this.broadcast('InOption','init',{value:this.currentValue});
         }
+    },
+    mounted(){
+        this.$on('select',this.itemClick);
+        this.broadcast('InOption','init',{value:this.currentValue});
     },
     methods:{
         //获取当前页面的最大Index
@@ -54,10 +58,10 @@ export default {
         },
         itemClick(item){
             this.isShow = false;
-            this.$emit('input',item);
-            if(this.currentValue!= item){
-                this.currentValue = item;
-                this.$emit('change',item);
+            this.label = item.label;
+            if(item.value != this.currentValue){
+                this.$emit('input',item.value);
+                this.$emit('change',item.value);
             }
         }
     }
@@ -142,18 +146,6 @@ export default {
             padding: 10px 0;
             max-height: 200px;
             overflow-y: auto;
-            >.in-select-item{
-                padding: 0 30px;
-                line-height: 30px;
-                font-size: 14px;
-                cursor: pointer;
-                &:hover{
-                    background: #EEE;
-                }
-            }
-            >.inselect-item__selected{
-                color: @primaryColor;
-            }
         }
     }
     .in-select-scroll::-webkit-scrollbar{

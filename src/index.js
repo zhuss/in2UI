@@ -3,6 +3,7 @@ import Input from './components/input/input.vue'
 import InputNumber from './components/number/number.vue'
 import Textarea from './components/textarea/textarea.vue'
 import Select from './components/select/select.vue'
+import Option from './components/option/option.vue'
 import Pagination from './components/pagination/pagination.vue'
 import Model from './components/model/model.vue'
 import Switch from './components/switch/switch.vue'
@@ -29,6 +30,7 @@ const IngtubeComponents = {
         Vue.component(Radio.name,Radio);
         Vue.component(Textarea.name,Textarea);
         Vue.component(Select.name,Select);
+        Vue.component(Option.name,Option);
         Vue.component(Pagination.name,Pagination);
         Vue.component(Nav.name,Nav);
         Vue.component(SubNav.name,SubNav);

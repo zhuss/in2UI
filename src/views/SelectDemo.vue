@@ -3,13 +3,19 @@
         <h2 class="demo-title">选择框</h2>
         <div class="demo-body">
             <div class="demo-select">
-                 <in-select v-model="form.select1" :select="selectArray1" @change="change"></in-select>
+                 <in-select v-model="form.select1" @change="change">
+                     <in-option v-for="item in selectArray1" :key="item" :label="item" :value="item"></in-option>
+                 </in-select>
             </div>
             <div class="demo-select">
-                 <in-select v-model="form.select2" :select="selectArray2"></in-select>
+                 <in-select v-model="form.select2">
+                     <in-option v-for="item in selectArray2" :key="item" :label="item" :value="item"></in-option>
+                 </in-select>
             </div>
             <div class="demo-select">
-                 <in-select disabled v-model="form.select2" :select="selectArray2"></in-select>
+                 <in-select disabled v-model="form.select2">
+                     <in-option v-for="item in selectArray2" :key="item" :label="item" :value="item"></in-option>
+                 </in-select>
             </div>
             <div class="demo-button">
                 <in-button @click="btnClick">显示</in-button>

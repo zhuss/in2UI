@@ -10,7 +10,11 @@
                      <in-textarea v-model="form.description"></in-textarea>
                  </in-form-item>
                   <in-form-item label="活动类型">
-                     <in-select v-model="form.type" :select="typeArray"></in-select>
+                     <in-select v-model="form.type">
+                        <in-option :value="1" label="试用活动"></in-option>
+                        <in-option :value="2" label="秒杀活动"></in-option>
+                        <in-option :value="3" label="悬赏活动"></in-option>
+                     </in-select>
                  </in-form-item>
                  <in-form-item label="活动名额">
                      <in-number style="width:200px;" v-model="form.number" :min="1"></in-number>
@@ -37,12 +41,11 @@
 export default {
     data(){
         return {
-            typeArray:['试用活动','秒杀活动','悬赏活动'],
             channelArray:[{name:'微博',value:1},{name:'小红书',value:2},{name:'美拍',value:3},{name:'B站',value:4}],
             form:{
                 title:'',
                 description:'',
-                type:'悬赏活动',
+                type:2,
                 number:1,
                 isSole:true,
                 channel:[]
