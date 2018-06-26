@@ -1,5 +1,5 @@
 <template>
-    <div class="in-nav-item" :class="{'in-nav-item-active':activeIndex==index}" @click="itemClick">
+    <div class="in-nav-item" :class="{'in-nav-active':activeIndex==index}" @click="itemClick">
         <slot></slot>
     </div>
 </template>
@@ -43,7 +43,7 @@ export default {
         background: #EAEAEA;
     }
 }
-.in-nav-item-active{
+.in-nav-active{
     color: @primaryColor;
 }
 </style>
