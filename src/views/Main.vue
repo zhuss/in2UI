@@ -8,12 +8,12 @@
         </div>
         <div class="main-body">
             <div class="main-left">
-                <div class="nav">
-                    <router-link class="nav-item" :class="{'nav-active':$route.name=='demo'}" :to="{name:'demo'}">案例合集</router-link>
-                    <router-link class="nav-item" :class="{'nav-active':$route.name=='model'}" :to="{name:'model'}">模态案例</router-link>
-                    <router-link class="nav-item" :class="{'nav-active':$route.name=='table'}" :to="{name:'table'}">表格案例</router-link>
-                    <router-link class="nav-item" :class="{'nav-active':$route.name=='nav'}" :to="{name:'nav'}">导航案例</router-link>
-                </div>
+                <in-nav :active="$route.name" @select="select">
+                    <in-nav-item index="demo">案例合集</in-nav-item>
+                    <in-nav-item index="model">模态案例</in-nav-item>
+                    <in-nav-item index="table">表格案例</in-nav-item>
+                    <in-nav-item index="nav">导航案例</in-nav-item>
+                </in-nav>
             </div>
             <div class="main-content">
                 <router-view/>
@@ -21,6 +21,17 @@
         </div>
     </div>
 </template>
+<script>
+export default {
+    methods:{
+        select(index){
+            this.$router.push({
+                name:index
+            })
+        }
+    }
+}
+</script>
 <style lang="less" scoped>
 .page-main{
     width: 100%;
