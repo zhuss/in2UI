@@ -24,6 +24,7 @@ export default {
     watch:{
         value(value){
             this.currentValue = value;
+            this.broadcast('InCheckbox','init',{value:this.currentValue});
         }
     },
     mounted(){

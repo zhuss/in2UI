@@ -16,6 +16,9 @@
             <in-checkbox-group v-model="form.hobby">
                 <in-checkbox v-for="item in hobbyList" :key="item" :label="item"></in-checkbox>
             </in-checkbox-group>
+            <in-checkbox-group v-model="form.hobby">
+                <in-checkbox v-for="item in hobbyList" :key="item" :label="item"></in-checkbox>
+            </in-checkbox-group>
         </div>
         <div class="demo-body">
             <in-radio v-model="form.gender" :label="1"></in-radio>男

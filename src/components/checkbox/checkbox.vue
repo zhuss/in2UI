@@ -34,6 +34,8 @@ export default {
             let valueList = value.value;
             if(valueList.indexOf(this.label) > -1){
                 this.currentValue = true;
+            }else{
+                this.currentValue = false;
             }
         },
         change(e){
