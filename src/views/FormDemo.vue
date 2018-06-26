@@ -7,7 +7,7 @@
                      <in-input placeholder="请输入活动名称" v-model="form.title"></in-input>
                  </in-form-item>
                  <in-form-item label="活动描述">
-                     <in-textarea v-model="form.description"></in-textarea>
+                     <in-textarea placeholder="请输入活动描述" v-model="form.description"></in-textarea>
                  </in-form-item>
                   <in-form-item label="活动类型">
                      <in-select v-model="form.type">

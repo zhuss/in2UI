@@ -1,10 +1,13 @@
 <template>
+<div class="in-textarea-warp">
+    <p class="in-textarea-placeholder" v-show="placeholder&&value==''">{{placeholder}}</p>
     <div class="in-textarea"
          ref="textarea" 
          :contenteditable="!disabled"
          @input="handleInput"
          @focus="handleFocus"
          @blur="handleBlur"></div>
+</div>
 </template>
 <script>
 export default {
@@ -12,6 +15,10 @@ export default {
     props:{
         value:{
             type:String
+        },
+        placeholder:{
+            type:String,
+            default:''
         },
         disabled:{
             type:Boolean,
@@ -80,28 +87,39 @@ export default {
 </script>
 <style lang="less">
 @import '../../assets/css/base';
-.in-textarea{
-    box-sizing: border-box;
-    padding: 10px;
-    width: 100%;
-    min-height: 100px;
-    height: auto;
-    outline: none;
-    resize: none;
-    border: 1px solid @secondaryColor;
-    border-radius:2px; 
-    font-size: 14px;
-    line-height: 24px;
-    >p{
-        word-break: break-all;
+.in-textarea-warp{
+    position: relative;
+    >.in-textarea-placeholder{
+        position: absolute;
+        top: 10px;
+        left: 30px;
         font-size: 14px;
-        color: @regularColor;
+        line-height: 24px;
+        color: #6E6E6E;
     }
-}
-.in-textarea[contenteditable='false']{
-    background: #EEE;
-    opacity: .6;
-    cursor: not-allowed;
+    >.in-textarea{
+        box-sizing: border-box;
+        padding:10px 30px;
+        width: 100%;
+        min-height: 100px;
+        height: auto;
+        outline: none;
+        resize: none;
+        border: 1px solid @secondaryColor;
+        border-radius:2px; 
+        font-size: 14px;
+        line-height: 24px;
+        >p{
+            word-break: break-all;
+            font-size: 14px;
+            color: @regularColor;
+        }
+    }
+    >.in-textarea[contenteditable='false']{
+        background: #EEE;
+        opacity: .6;
+        cursor: not-allowed;
+    }
 }
 </style>
 
