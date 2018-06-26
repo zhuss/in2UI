@@ -149,11 +149,13 @@ export default {
         }
     }
     .in-select-scroll::-webkit-scrollbar{
-        width: 2px;
-        height: 2px;
+        width: 4px;
+        height: 4px;
+        background: #EEE;
     }
     ::-webkit-scrollbar-thumb{
         background: rgba(0,0,0,.2);
+        border-radius:4px; 
     }
 }
 </style>

@@ -39,15 +39,16 @@ export default {
 @import '../../assets/css/base.less';
 .in-option{
     padding: 0 30px;
-    line-height: 30px;
+    line-height: 40px;
     font-size: 14px;
     cursor: pointer;
+    transition: all .3s;
     &:hover{
-        background: #EEE;
+        background: @borderColor;
     }
 }
 .in-option-select{
-    color: @primaryColor
+    color: @primaryColor;
 }
 </style>
 
