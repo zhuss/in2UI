@@ -1,7 +1,7 @@
 <template>
     <div class="in-select" v-clickOutSide="clickOutSide">
       <div class="in-select-arrow-down" @click="focus"></div>
-      <input :disabled="disabled"  v-model="label" class="in-select-input" readonly type="text" placeholder="请选择" @focus="focus">
+      <input :disabled="disabled"  v-model="label" class="in-select-input" readonly type="text" placeholder="请选择" @click="focus">
       <transition name="fade">
         <div class="in-select-panel" :style="{'z-index':zIndex}" v-show="isShow">
             <div class="in-select-arrow" :style="{'z-index':zIndex}" ></div>
@@ -50,8 +50,10 @@ export default {
             this.zIndex = getMaxZindex()+1;
         },
         focus(e){
-            this.getIndex();
-            this.isShow = true;
+            if(!this.isShow){
+                this.getIndex();
+            }
+            this.isShow = !this.isShow;
         },
         clickOutSide(e){
             this.isShow = false;

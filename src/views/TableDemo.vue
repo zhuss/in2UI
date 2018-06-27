@@ -1,27 +1,24 @@
 <template>
     <div class="demo-block">
-        <in-table>
-            <thead>
-                <tr>
-                    <th>微博昵称</th>
-                    <th>主要渠道</th>
-                    <th>邀请码</th>
-                    <th>审核状态</th>
-                    <th width="200">操作</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr v-for="item in list">
-                    <td>{{item.nickName}}</td>
-                    <td>{{item.plat}}</td>
-                    <td>{{item.code}}</td>
-                    <td>{{item.status}}</td>
-                    <td>
-                        <in-button type="primary" @click="passClick">通过</in-button>
-                        <in-button @click="refuseClick">拒绝</in-button>
-                    </td>
-                </tr>
-            </tbody>
+        <in-table :data="list">
+            <template slot-scope="scope">
+                <in-table-column label="昵称">
+                        {{scope.row.nickName}}
+                </in-table-column>
+                <in-table-column label="平台">
+                    {{scope.row.plat}}
+                </in-table-column>
+                <in-table-column label="邀请码">
+                    {{scope.row.code}}
+                </in-table-column>
+                <in-table-column label="状态">
+                     {{scope.row.status}}
+                </in-table-column>
+                <in-table-column label="操作" width="200">
+                    <in-button type="primary" @click="passClick">通过</in-button>
+                    <in-button @click="refuseClick">拒绝</in-button>
+                </in-table-column>
+            </template>
         </in-table>
         <div class="pagination">
             <in-pagination :total="50"></in-pagination>
@@ -39,30 +36,10 @@ export default {
                 code:'INGVIP0',
                 status:'待审核'
             },{
-                nickName:'就废话特别多',
-                plat:'微博',
-                code:'INGVIP0',
-                status:'待审核'
-            },{
-                nickName:'就废话特别多',
-                plat:'微博',
-                code:'INGVIP0',
-                status:'待审核'
-            },{
-                nickName:'就废话特别多',
-                plat:'微博',
-                code:'INGVIP0',
-                status:'待审核'
-            },{
-                nickName:'就废话特别多',
-                plat:'微博',
-                code:'INGVIP0',
-                status:'待审核'
-            },{
-                nickName:'就废话特别多',
-                plat:'微博',
-                code:'INGVIP9',
-                status:'待审核'
+                nickName:'就废话特别多0123123',
+                plat:'微博2',
+                code:'INGVIP30',
+                status:'待发货'
             }]
         }
     },

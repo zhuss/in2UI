@@ -11,6 +11,7 @@ import Checkbox from './components/checkbox/checkbox.vue'
 import CheckboxGroup from './components/checkbox-group/checkboxGroup.vue'
 import Radio from './components/radio/radio.vue'
 import Table from './components/table/table.vue'
+import TableColumn from './components/table-column/tableColumn.vue'
 import Nav from './components/nav/nav.vue'
 import NavItem from './components/nav-item/navItem.vue'
 import SubNav from './components/sub-nav/subNav.vue'
@@ -37,6 +38,7 @@ const IngtubeComponents = {
         Vue.component(NavItem.name,NavItem);
         Vue.component(Model.name,Model);
         Vue.component(Table.name,Table);
+        Vue.component(TableColumn.name,TableColumn);
         Vue.component(Form.name,Form);
         Vue.component(FormItem.name,FormItem);
         
