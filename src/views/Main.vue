@@ -1,19 +1,26 @@
 <template>
     <div class="page-main">
         <div class="main-top">
-            <div class="main-title">ingtubeUI</div>
+            <div class="main-title">
+                <a href="http://www.ingtube.com">
+                    <img class="logo" src="../assets/logo_in2.png" alt="映兔logo">
+                </a>
+                <a href="http://www.ingtube.com">
+                    <span>in2UI</span>
+                </a>
+            </div>
             <div class="main-login">
-                <router-link :to="{name:'login'}">退出登录</router-link>
+                <router-link :to="{name:'login'}"><i class="fa fa-sign-out"></i> 退出登录</router-link>
             </div>
         </div>
         <div class="main-body">
             <div class="main-left">
                 <in-nav :active="$route.name" @select="select">
-                    <in-nav-item index="demo">案例合集</in-nav-item>
-                    <in-nav-item index="model">模态案例</in-nav-item>
-                    <in-nav-item index="table">表格案例</in-nav-item>
-                    <in-nav-item index="nav">导航案例</in-nav-item>
-                    <in-nav-item index="form">表单案例</in-nav-item>
+                    <in-nav-item index="demo"><i class="fa fa-dashboard"></i> 案例合集</in-nav-item>
+                    <in-nav-item index="model"><i class="fa fa-desktop"></i> 模态案例</in-nav-item>
+                    <in-nav-item index="table"><i class="fa fa-table"></i> 表格案例</in-nav-item>
+                    <in-nav-item index="nav"><i class="fa fa-bars"></i> 导航案例</in-nav-item>
+                    <in-nav-item index="form"><i class="fa fa-pencil-square-o"></i> 表单案例</in-nav-item>
                 </in-nav>
             </div>
             <div class="main-content">
@@ -50,18 +57,30 @@ export default {
             padding: 10px 20px;
             height: 40px;
             line-height: 40px;
-            font-size: 20px;
-            color: #FFF;
+            >a{
+                text-decoration: none;
+                color: #FFF;
+            }
+            .logo{
+                width: 40px;
+                height: 40px;
+                vertical-align: middle;
+            }
+            span{
+                font-size: 26px;
+                vertical-align: middle;
+            }
         }
         >.main-login{
             padding: 10px 20px;
             height: 40px;
             line-height: 40px;
             a{
+                font-size: 14px;
                text-decoration: none;
-               color: #414141;
+               color: #EAEAEA;
                &:hover{
-                   color: #666;
+                   color: #FFF;
                }
             }
         }

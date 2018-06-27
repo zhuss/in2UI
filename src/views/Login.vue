@@ -2,7 +2,7 @@
     <div class="page-login">
             <div class="form-login">
                  <div class="form-item">
-                    <h2 class="form-title">后台登录</h2>
+                    <h2 class="form-title">in2 后台登录</h2>
                 </div>
                 <div class="form-item">
                     <in-input placeholder="请输入邮箱"></in-input>

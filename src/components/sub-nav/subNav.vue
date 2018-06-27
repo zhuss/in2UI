@@ -1,7 +1,8 @@
 <template>
     <div class="in-sub-nav">
         <div class="in-sub-title" @click="isOpen=!isOpen">
-            <div class="in-sub-text">{{title}}</div>
+            <div class="in-sub-text" v-if="$slots.title"><slot name="title"></slot></div>
+            <div class="in-sub-text" v-else>{{title}}</div>
             <div class="in-sub-icon" :class="{'in-sub-icon-open':isOpen}"></div>
         </div>
         <div class="in-sub-warp" :style="{height:isOpen?height+'px':'0px'}">

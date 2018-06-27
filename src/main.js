@@ -3,6 +3,7 @@
 import Vue from 'vue'
 import App from './App'
 import IngtubeUI from './index'
+import 'font-awesome/css/font-awesome.css'
 import router from './router'
 
 Vue.config.productionTip = false
