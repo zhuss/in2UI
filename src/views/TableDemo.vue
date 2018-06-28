@@ -6,7 +6,10 @@
                         {{scope.row.nickName}}
                 </in-table-column>
                 <in-table-column label="平台">
-                    {{scope.row.plat}}
+                    <in-tip :content="scope.row.nickName">
+                        <span>{{scope.row.plat}}</span>
+                    </in-tip>
+                    
                 </in-table-column>
                 <in-table-column label="邀请码">
                     {{scope.row.code}}

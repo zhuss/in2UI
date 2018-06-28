@@ -5,6 +5,7 @@
             <h2 class="demo-title">普通按钮</h2>
             <div class="demo-body">
                 <in-button @click="clickOne">默认按钮</in-button>
+                
                 <in-button  @click="primaryClick" type="primary">主要按钮</in-button>
 
                 <in-button round @click="confirmClick">圆角按钮</in-button>
@@ -51,6 +52,15 @@
                 <div class="demo-input">
                     <in-textarea disabled v-model="form.textArea"></in-textarea>
                 </div>
+            </div>
+        </div>
+
+        <div class="demo-block">
+            <h2 class="demo-title">默认提示</h2>
+            <div class="demo-body">
+                 <in-tip content="默认提示">
+                    <span>默认提示</span>
+                </in-tip>
             </div>
         </div>
 

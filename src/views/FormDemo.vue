@@ -31,7 +31,10 @@
                  </in-form-item>
                  <in-form-item>
                      <in-button type="primary" @click="submitClick">确认</in-button>
-                     <in-button>取消</in-button>
+                     <in-tip content="哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈">
+                         <in-button>取消</in-button>
+                     </in-tip>
+                     
                  </in-form-item>
              </in-form>
          </div>

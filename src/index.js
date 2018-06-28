@@ -19,6 +19,7 @@ import Form from './components/form/form.vue'
 import FormItem from './components/form-item/formItem.vue'
 import Tab from './components/tab/tab.vue'
 import TabPanel from './components/tab-panel/tabPanel.vue'
+import Tip from './components/tip/tip.vue'
 import Message from './components/message/main.js'
 import MessageBox from './components/message-box/main.js'
 
@@ -45,6 +46,7 @@ const IngtubeComponents = {
         Vue.component(FormItem.name,FormItem);
         Vue.component(Tab.name,Tab);
         Vue.component(TabPanel.name,TabPanel);
+        Vue.component(Tip.name,Tip);
         
         Vue.prototype.$message = Message;
         Vue.prototype.$confirm = MessageBox.confirm;
