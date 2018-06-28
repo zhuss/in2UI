@@ -21,9 +21,9 @@
             </in-checkbox-group>
         </div>
         <div class="demo-body">
-            <in-radio v-model="form.gender" :label="1"></in-radio>男
-            <in-radio v-model="form.gender" :label="0"></in-radio>女
-            <in-radio disabled v-model="form.gender" :label="2"></in-radio>其他
+            <in-radio v-model="form.gender" :label="1">男</in-radio>
+            <in-radio v-model="form.gender" :label="0">女</in-radio>
+            <in-radio disabled v-model="form.gender" :label="2">其他</in-radio>
         </div>
         <div class="demo-body">
             <in-button @click="click">取值</in-button>

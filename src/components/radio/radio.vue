@@ -2,6 +2,8 @@
     <div class="in-radio">
         <input :disabled="disabled" class="in-radio-input" :class="{'in-radio-input-checked':currentValue==label}" type="radio" v-model="currentValue" :value="label" @change="change">
         <span class="in-radio-ponit"></span>
+        <span class="in-radio-text" v-if="$slots.default"><slot></slot></span>
+        <span class="in-radio-text" v-else>{{label}}</span>
     </div>
 </template>
 <script>
@@ -35,11 +37,18 @@ export default {
 .in-radio{
     display: inline-block;
     vertical-align:middle;
-    width: 30px;
     height: 40px;
     padding: 5px 0;
     box-sizing: border-box;
     position: relative;
+    & + .in-radio{
+        margin-left: 20px;
+    }
+    >.in-radio-text{
+        vertical-align: middle;
+        color: @regularColor;
+        font-size: 14px;
+    }
     >.in-radio-input{
         position: absolute;
         left: 0;
@@ -48,16 +57,17 @@ export default {
         outline: none;
         margin: 0;
         padding: 0;
-        width: 30px;
+        width: 100%;
         height: 30px;
         cursor: pointer;
         z-index: 1;
         opacity: 0;
         & +.in-radio-ponit{
             position: relative;
-            display: block;
-            width: 100%;
-            height: 100%;
+            display: inline-block;
+            vertical-align: middle;
+            width: 30px;
+            height: 30px;
             background: #FFF;
             border: 1px solid @secondaryColor;
             border-radius:100%; 
