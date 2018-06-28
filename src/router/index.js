@@ -8,6 +8,7 @@ import Model from '../views/ModelDemo.vue'
 import Table from '../views/TableDemo.vue'
 import Nav from '../views/NavDemo.vue'
 import Form from '../views/FormDemo.vue'
+import Tab from '../views/TabDemo.vue'
 
 
 Vue.use(Router)
@@ -44,6 +45,10 @@ export default new Router({
         path:'form',
         name:'form',
         component:Form
+      },{
+        path:'tab',
+        name:'tab',
+        component:Tab
       }]
     }
   ]

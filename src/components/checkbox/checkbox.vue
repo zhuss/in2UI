@@ -53,7 +53,7 @@ export default {
     display: inline-block;
     vertical-align:middle;
     height: 40px;
-    padding: 5px;
+    padding: 5px 0;
     box-sizing: border-box;
     position: relative;
     & + .in-checkbox{
@@ -66,7 +66,7 @@ export default {
     }
     >.in-checkbox-input{
         position: absolute;
-        left: 5px;
+        left: 0;
         top: 5px;
         -webkit-appearance: none;
         outline: none;

@@ -35,14 +35,14 @@ export default {
 .in-radio{
     display: inline-block;
     vertical-align:middle;
-    width: 40px;
+    width: 30px;
     height: 40px;
-    padding: 5px;
+    padding: 5px 0;
     box-sizing: border-box;
     position: relative;
     >.in-radio-input{
         position: absolute;
-        left: 5px;
+        left: 0;
         top: 5px;
         -webkit-appearance: none;
         outline: none;

@@ -21,6 +21,7 @@
                     <in-nav-item index="table"><i class="fa fa-table"></i> 表格案例</in-nav-item>
                     <in-nav-item index="nav"><i class="fa fa-bars"></i> 导航案例</in-nav-item>
                     <in-nav-item index="form"><i class="fa fa-pencil-square-o"></i> 表单案例</in-nav-item>
+                    <in-nav-item index="tab"><i class="fa fa-tasks"></i> Tab案例</in-nav-item>
                 </in-nav>
             </div>
             <div class="main-content">

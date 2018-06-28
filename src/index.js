@@ -17,6 +17,8 @@ import NavItem from './components/nav-item/navItem.vue'
 import SubNav from './components/sub-nav/subNav.vue'
 import Form from './components/form/form.vue'
 import FormItem from './components/form-item/formItem.vue'
+import Tab from './components/tab/tab.vue'
+import TabPanel from './components/tab-panel/tabPanel.vue'
 import Message from './components/message/main.js'
 import MessageBox from './components/message-box/main.js'
 
@@ -41,6 +43,8 @@ const IngtubeComponents = {
         Vue.component(TableColumn.name,TableColumn);
         Vue.component(Form.name,Form);
         Vue.component(FormItem.name,FormItem);
+        Vue.component(Tab.name,Tab);
+        Vue.component(TabPanel.name,TabPanel);
         
         Vue.prototype.$message = Message;
         Vue.prototype.$confirm = MessageBox.confirm;

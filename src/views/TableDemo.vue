@@ -37,7 +37,7 @@ export default {
                 status:'待审核'
             },{
                 nickName:'就废话特别多0123123',
-                plat:'微博2',
+                plat:'小红书',
                 code:'INGVIP30',
                 status:'待发货'
             }]

@@ -90,7 +90,7 @@ export default {
 <style lang="less" scoped>
 @import '../../assets/css/base';
 .in-number{
-    width: 100%;
+    width: 180px;
     height: 40px;
     border: 1px solid @secondaryColor;
     box-sizing: border-box;

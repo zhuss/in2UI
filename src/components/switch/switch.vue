@@ -37,7 +37,7 @@ export default {
     display: inline-block;
     width: 50px;
     height: 40px;
-    padding: 5px;
+    padding: 5px 0;
     box-sizing: border-box;
     vertical-align: middle;
     >.in-switch-warp{
