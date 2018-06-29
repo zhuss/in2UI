@@ -31,6 +31,7 @@ export default {
     cursor: pointer;
     font-size: 14px;
     border-radius:2px;
+    transition: all .3s;
 }
 .in-button+.in-button{
     margin-left: 10px;

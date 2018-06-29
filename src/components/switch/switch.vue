@@ -35,13 +35,16 @@ export default {
 @import '../../assets/css/base';
 .in-switch{
     display: inline-block;
-    width: 50px;
+    width: 40px;
     height: 40px;
     padding: 5px 0;
     box-sizing: border-box;
     vertical-align: middle;
+    & + .in-switch{
+        margin-left: 10px;
+    }
     >.in-switch-warp{
-        width: 50px;
+        width: 40px;
         height: 30px;
         background: #FFF;
         cursor: pointer;
@@ -83,7 +86,7 @@ export default {
                     display: block;
                     width: 20px;
                     height: 20px;
-                    border-radius:2px; 
+                    border-radius:4px; 
                     background: #FFF;
                     transition: left .2s;
                 }
@@ -91,7 +94,7 @@ export default {
             &:checked+.in-switch-point{
                 background: @primaryColor;
                 &::after{
-                    left: 25px;
+                    left: 15px;
                 }
             }
         }
