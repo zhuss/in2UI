@@ -114,15 +114,18 @@ export default {
         }
     }
     >.in-number-input{
+        -webkit-appearance: none;
         display: block;
         outline: none;
         padding: 0 30px;
+        margin: 0;
         box-sizing: border-box;
         width: 10%;
         flex: 1;
         border: none;
         border-left:1px solid  @secondaryColor;
         border-right:1px solid  @secondaryColor;
+        border-radius:0; 
         font-size: 14px;
         color: @regularColor;
          &[disabled]{
