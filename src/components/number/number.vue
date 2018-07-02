@@ -48,18 +48,18 @@ export default {
     },
     methods:{
         handleInput(e){
-            let val = event.target.value.trim();
+            let val = e.target.value.trim();
             if(val == ''|| val == '-'){
                 this.currentValue = val;
                 this.$emit('input',this.currentValue);
             }else{
                 val = Number(val);
                 if(!isNaN(val)&&val<=999999999999999&&val>=-999999999999999){
-                    event.target.value = val;
+                    e.target.value = val;
                     this.currentValue = val;
                     this.$emit('input',this.currentValue);
                 }else{
-                    event.target.value = this.currentValue;
+                    e.target.value = this.currentValue;
                 }
             }
             
@@ -68,6 +68,16 @@ export default {
             this.$emit('focus',e);
         },
         handleBlur(e){
+             let val = e.target.value.trim();
+             if(val < this.min){
+                val = this.min
+            }
+            if(val > this.max){
+                val = this.max
+            }
+             e.target.value = val;
+            this.currentValue  = val;
+            this.$emit('input',this.currentValue);
             this.$emit('blur',e);
         },
         handleChange(e){
