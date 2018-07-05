@@ -121,6 +121,7 @@ export default {
         border: 1px solid @secondaryColor;
         border-radius: 2px;
         background: #FFF;
+        box-shadow: 0 0 2px rgba(0, 0, 0, .2);
         >.in-select-arrow{
             position: absolute;
             left: 50%;

@@ -1,5 +1,40 @@
 <template>
     <div class="view-main">
+        <div class="demo-block">
+            <h2 class="demo-title">Popover弹出框</h2>
+            <div class="demo-body">
+                <in-popover width="300">
+                    <in-button>click激活</in-button>
+                    <div slot="content">
+                        <p>这是一段内容,这是一段内容,这是一段内容,这是一段内容。</p>
+                    </div>
+                </in-popover>
+            </div>
+        </div>
+        <!--dropdown-->
+        <div class="demo-block">
+            <h2 class="demo-title">下拉菜单</h2>
+            <div class="demo-body">
+                <in-dropdown @command="command">
+                   <in-button>下拉菜单</in-button>
+                   <in-dropdown-menu slot="dropdown">
+                       <in-dropdown-item command="a">123123你hihihi和2</in-dropdown-item>
+                       <in-dropdown-item command="b">123123</in-dropdown-item>
+                       <in-dropdown-item command="c">123123</in-dropdown-item>
+                   </in-dropdown-menu>
+                </in-dropdown>
+
+                <in-dropdown>
+                   <span>下拉菜单</span>
+                   <in-dropdown-menu slot="dropdown">
+                       <in-dropdown-item>123123你hihihi和2</in-dropdown-item>
+                       <in-dropdown-item>123123</in-dropdown-item>
+                       <in-dropdown-item>123123</in-dropdown-item>
+                   </in-dropdown-menu>
+                </in-dropdown>
+            </div>
+        </div>
+        <!--dropdown-->
         <!-- 按钮 -->
         <div class="demo-block">
             <h2 class="demo-title">普通按钮</h2>
@@ -95,6 +130,9 @@ export default {
         }
     },
     methods:{
+        command(command){
+           this.$message(command);
+        },
         clickOne(e){
             this.$message(JSON.stringify(this.form));
         },

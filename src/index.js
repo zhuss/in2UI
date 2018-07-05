@@ -20,6 +20,10 @@ import FormItem from './components/form-item/formItem.vue'
 import Tab from './components/tab/tab.vue'
 import TabPanel from './components/tab-panel/tabPanel.vue'
 import Tip from './components/tip/tip.vue'
+import Dropdown from './components/dropdown/dropdown.vue'
+import DropdownMenu from './components/dropdown-menu/dropdownMenu.vue'
+import DropdownItem from './components/dropdown-item/dropdownItem.vue'
+import Popover from './components/popover/popover.vue'
 import Message from './components/message/main.js'
 import MessageBox from './components/message-box/main.js'
 
@@ -47,6 +51,10 @@ const IngtubeComponents = {
         Vue.component(Tab.name,Tab);
         Vue.component(TabPanel.name,TabPanel);
         Vue.component(Tip.name,Tip);
+        Vue.component(Dropdown.name,Dropdown);
+        Vue.component(DropdownMenu.name,DropdownMenu);
+        Vue.component(DropdownItem.name,DropdownItem);
+        Vue.component(Popover.name,Popover);
         
         Vue.prototype.$message = Message;
         Vue.prototype.$confirm = MessageBox.confirm;
