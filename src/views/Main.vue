@@ -42,6 +42,7 @@ export default {
 }
 </script>
 <style lang="less" scoped>
+@import '../assets/css/base.less';
 .page-main{
     width: 100%;
     height: 100%;
@@ -51,7 +52,7 @@ export default {
     >.main-top{
         width: 100%;
         height: 60px;
-        background: #25b864;
+        background:@primaryColor;
         display: flex;
         >.main-title{
             flex: 1;

@@ -41,6 +41,12 @@ export default {
   border: 1px solid @primaryColor;
   color: #FFF;
 }
+.in-button__text{
+  padding: 0;
+  background:transparent;
+  border: none;
+  color:@primaryColor;
+}
 .in-button:disabled{
     opacity: .6;
     cursor: not-allowed;

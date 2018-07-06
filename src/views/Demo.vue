@@ -18,18 +18,18 @@
                 <in-dropdown @command="command">
                    <in-button>下拉菜单</in-button>
                    <in-dropdown-menu slot="dropdown">
-                       <in-dropdown-item command="a">123123你hihihi和2</in-dropdown-item>
-                       <in-dropdown-item command="b">123123</in-dropdown-item>
-                       <in-dropdown-item command="c">123123</in-dropdown-item>
+                       <in-dropdown-item command="a">账户设置</in-dropdown-item>
+                       <in-dropdown-item command="b">修改密码</in-dropdown-item>
+                       <in-dropdown-item command="c">安全退出</in-dropdown-item>
                    </in-dropdown-menu>
                 </in-dropdown>
 
                 <in-dropdown>
-                   <span>下拉菜单</span>
+                   <in-button type="text">zhushunsheng@ingtube.com</in-button>
                    <in-dropdown-menu slot="dropdown">
-                       <in-dropdown-item>123123你hihihi和2</in-dropdown-item>
-                       <in-dropdown-item>123123</in-dropdown-item>
-                       <in-dropdown-item>123123</in-dropdown-item>
+                       <in-dropdown-item>账户设置</in-dropdown-item>
+                       <in-dropdown-item>修改密码</in-dropdown-item>
+                       <in-dropdown-item>安全退出</in-dropdown-item>
                    </in-dropdown-menu>
                 </in-dropdown>
             </div>
@@ -48,6 +48,9 @@
 
                 <in-button :disabled="true">默认按钮</in-button>
                 <in-button disabled type="primary">主要按钮</in-button>
+
+                <in-button type="text">文字按钮</in-button>
+                <in-button disabled type="text">文字按钮</in-button>
             </div>
         </div>
         <!-- /按钮 -->
