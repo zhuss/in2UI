@@ -2,9 +2,27 @@
     <div class="view-main">
         <div class="demo-block">
             <h2 class="demo-title">Popover弹出框</h2>
-            <div class="demo-body">
-                <in-popover width="300">
-                    <in-button>click激活</in-button>
+            <div class="demo-body" style="padding:100px;">
+                <in-popover width="400" placement="top">
+                    <in-button>top</in-button>
+                    <div slot="content">
+                        <p>这是一段内容,这是一段内容,这是一段内容,这是一段内容。</p>
+                    </div>
+                </in-popover>
+                <in-popover width="200" placement="bottom">
+                    <in-button>bottom</in-button>
+                    <div slot="content">
+                        <p>这是一段内容,这是一段内容,这是一段内容,这是一段内容。</p>
+                    </div>
+                </in-popover>
+                <in-popover width="300" placement="left">
+                    <in-button>left</in-button>
+                    <div slot="content">
+                        <p>这是一段内容,这是一段内容,这是一段内容,这是一段内容。</p>
+                    </div>
+                </in-popover>
+                <in-popover width="300" placement="right">
+                    <in-button>right</in-button>
                     <div slot="content">
                         <p>这是一段内容,这是一段内容,这是一段内容,这是一段内容。</p>
                     </div>

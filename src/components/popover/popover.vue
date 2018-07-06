@@ -2,8 +2,7 @@
     <div class="in-popover" @click="handleClick" v-clickOutSide="clickOutSide">
         <slot></slot>
         <transition name="fade">
-            <div class="in-popover-warp" v-show="value" :style="{'z-index':zIndex}">
-                <span class="in-popover-icon"></span>
+            <div class="in-popover-warp" :class="['in-popover-'+placement]" v-show="value" :style="{'z-index':zIndex}">
                 <div class="in-popover-content" :style="{width:width+'px'}">
                     <slot name="content"></slot>
                 </div>
@@ -23,6 +22,10 @@ export default {
         width:{
             type:String,
             default:0
+        },
+        placement:{
+            type:String,
+            default:'bottom'
         }
     },
     data(){
@@ -54,37 +57,33 @@ export default {
 }
 .fade-enter, .fade-leave-to {
     opacity: 0;
-    transform: translateY(5px);
 }
 .in-popover{
     position: relative;
     display: inline-block;
+    >.in-popover-bottom{
+        bottom: -5px;
+        left: 0;
+        transform: translateY(100%);
+    }
+    >.in-popover-top{
+        top: -5px;
+        left: 0;
+        transform: translateY(-100%);
+    }
+    >.in-popover-left{
+        top: 0;
+        left:-5px;
+        transform: translateX(-100%);
+    }
+    >.in-popover-right{
+        top: 0;
+        right:-5px;
+        transform: translateX(100%);
+    }
     >.in-popover-warp{
-        position: absolute;
-        z-index: 10;
-        padding-top: 5px;
-        >.in-popover-icon{
-            display: block;
-            width: 0;
-            height: 0;
-            margin-left: 20px;
-            border-bottom: 10px solid @secondaryColor;
-            border-left:10px solid transparent; 
-            border-right:10px solid transparent; 
-            position: relative;
-            &::after{
-                position: absolute;
-                left: -10px;
-                top: 1px;
-                content: '';
-                display: block;
-                width: 0;
-                height: 0;
-                border-bottom:10px solid #FFF;
-                border-left:10px solid transparent;
-                border-right:10px solid transparent;
-            }
-        }
+            position: absolute;
+            z-index: 10;
         >.in-popover-content{
             width: 200px;
             border: 1px solid @secondaryColor;
