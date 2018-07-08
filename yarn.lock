@@ -5855,11 +5855,3 @@ yargs@~3.10.0:
     cliui "^2.1.0"
     decamelize "^1.0.0"
     window-size "0.1.0"
-
-z-date-picker@^1.0.2:
-  version "1.0.3"
-  resolved "http://registry.npm.taobao.org/z-date-picker/download/z-date-picker-1.0.3.tgz#9def55fae12ca8e4d326b3d8714911e02e3bd0e4"
-  dependencies:
-    moment "^2.22.2"
-    vue "^2.5.2"
-    vue-router "^3.0.1"

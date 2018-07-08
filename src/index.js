@@ -24,6 +24,7 @@ import Dropdown from './components/dropdown/dropdown.vue'
 import DropdownMenu from './components/dropdown-menu/dropdownMenu.vue'
 import DropdownItem from './components/dropdown-item/dropdownItem.vue'
 import Popover from './components/popover/popover.vue'
+import Datepicker from './components/datepicker/datepicker.vue'
 import Message from './components/message/main.js'
 import MessageBox from './components/message-box/main.js'
 
@@ -32,6 +33,7 @@ const IngtubeComponents = {
         Vue.component(Button.name,Button);
         Vue.component(Input.name,Input);
         Vue.component(InputNumber.name,InputNumber);
+        Vue.component(Datepicker.name,Datepicker);
         Vue.component(Switch.name,Switch);
         Vue.component(Checkbox.name,Checkbox);
         Vue.component(CheckboxGroup.name,CheckboxGroup);

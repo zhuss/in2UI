@@ -17,8 +17,8 @@
                      </in-select>
                  </in-form-item>
                  <in-form-item label="活动时间">
-                     <date-picker style="width:200px;" v-model="form.startDate"></date-picker>
-                     <date-picker style="width:200px;" v-model="form.endDate"></date-picker>
+                    <in-datepicker style="width:200px;" v-model="form.startDate"></in-datepicker>
+                    <in-datepicker style="width:200px;" v-model="form.endDate"></in-datepicker>
                  </in-form-item>
                  <in-form-item label="活动名额" >
                      <in-number style="width:200px;" v-model="form.number" :min="1"></in-number>
@@ -45,11 +45,7 @@
     </div>
 </template>
 <script>
-import DatePicker from 'z-date-picker'
 export default {
-    components:{ 
-        DatePicker
-    },
     data(){
         return {
             channelArray:[{name:'微博',value:1},{name:'小红书',value:2},{name:'美拍',value:3},{name:'B站',value:4}],
