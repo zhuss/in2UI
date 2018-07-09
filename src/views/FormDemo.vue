@@ -18,7 +18,7 @@
                  </in-form-item>
                  <in-form-item label="活动时间">
                     <in-datepicker style="width:200px;" v-model="form.startDate"></in-datepicker>
-                    <in-datepicker style="width:200px;" v-model="form.endDate"></in-datepicker>
+                    <in-datepicker style="width:200px; margin-left:18px;" v-model="form.endDate"></in-datepicker>
                  </in-form-item>
                  <in-form-item label="活动名额" >
                      <in-number style="width:200px;" v-model="form.number" :min="1"></in-number>
@@ -38,7 +38,6 @@
                      <in-tip content="哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈">
                          <in-button>取消</in-button>
                      </in-tip>
-                     
                  </in-form-item>
              </in-form>
          </div>

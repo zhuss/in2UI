@@ -227,6 +227,7 @@ export default {
 }
 </script>
 <style lang="less" scoped>
+@import '../../assets/css/base.less';
 .fade-enter-active, .fade-leave-active {
   transition: all .3s
 }
@@ -237,21 +238,22 @@ export default {
 .zss-date-picker{
     display: inline-block;
     box-sizing: border-box;
-    width: 400px;
+    width: 180px;
     height: 40px;
-    border: 1px solid #E6E6E6;
-    font-family: Arial, Helvetica, sans-serif;
+    border: 1px solid @secondaryColor;
+    border-radius:2px;
     text-align: center;
 }
 .zss-date-picker >.zss-date-input{
+    -webkit-appearance: none;
     width: 100%;
     height: 100%;
     border: 0;
     box-sizing: border-box;
-    padding: 0 20px;
+    padding: 0 30px;
     outline: none;
-    font-size: 16px;
-    color: #414141;
+    font-size: 14px;
+    color:@regularColor;
 }
 .zss-date-picker > .zss-picker-model{
     position: fixed;
@@ -275,8 +277,7 @@ export default {
     display: flex;
     height: 60px;
     line-height: 60px;
-    border-bottom:1px solid #E6E6E6;
-    background: #EEE;
+    border-bottom:1px solid @borderColor;
 }
 .zss-date-year{
     background: #FFF;
@@ -307,10 +308,10 @@ export default {
     transition: color .3s;
 }
 .zss-text-hover:hover{
-    color: #25b864;
+    color: @primaryColor;
 }
 .zss-text-disabled{
-    color: #E6E6E6;
+    color: @secondaryColor;
 }
 .zss-panel-body{
    padding:20px 30px;
@@ -331,16 +332,16 @@ export default {
   line-height: 50px;
   cursor: pointer;
   transition: all .3s;
-  color: #E6E6E6;
+  color: @secondaryColor;
 }
 .zss-month-now{
-    color: #414141;
+    color: @regularColor;
 }
 .zss-month-now:hover{
-    color: #25b864;
+    color: @primaryColor;
 }
 .zss-date-now{
-    background: #25b864;
+    background: @primaryColor;
     color: #FFF;
 }
 .zss-date-now:hover{
@@ -358,7 +359,7 @@ export default {
     text-align: center;
 }
 .zss-year:hover{
-    color: #25b864;
+    color: @primaryColor;
 }
 .zss-year-control{
     display: flex;
@@ -370,14 +371,14 @@ export default {
     cursor: pointer;
 }
 .zss-control-prev:hover{
-    color: #25b864;
+    color: @primaryColor;
 }
 .zss-control-next{
     flex: 1;
     cursor: pointer;
 }
 .zss-control-next:hover{
-    color: #25b864;
+    color: @primaryColor;
 }
 .zss-month-box{
     overflow: hidden;
