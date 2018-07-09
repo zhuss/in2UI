@@ -7,7 +7,8 @@
 export default {
     name:'InForm',
     props:{
-        inline:Boolean
+        inline:Boolean,
+        labelWidth:String
     }
 }
 </script>

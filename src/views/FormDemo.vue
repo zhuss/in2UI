@@ -2,8 +2,8 @@
     <div class="demo-block">
          <h2 class="demo-title">表单案例</h2>
          <div class="demo-body">
-             <in-form inline>
-                 <in-form-item label="活动名称">
+             <in-form inline label-width="100px">
+                 <in-form-item label="活动名称23123">
                      <in-input placeholder="请输入活动名称" v-model="form.title"></in-input>
                  </in-form-item>
                  <in-form-item label="活动描述">
@@ -35,7 +35,7 @@
                  </in-form-item>
                  <in-form-item>
                      <in-button type="primary" @click="submitClick">确认</in-button>
-                     <in-tip content="哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈">
+                     <in-tip style="margin-left:20px;" content="哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈">
                          <in-button>取消</in-button>
                      </in-tip>
                  </in-form-item>
@@ -70,7 +70,7 @@ export default {
 
 <style lang="less" scoped>
 .demo-block{
-    width: 500px;
+    width: 544px;
 }
 </style>
 
