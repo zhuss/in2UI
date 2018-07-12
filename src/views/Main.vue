@@ -117,6 +117,10 @@ export default {
             overflow: auto;
             padding: 10px;
         }
+        >.main-content::-webkit-scrollbar{
+            width: 0;
+            height: 0;
+        }
     }
 }
 </style>
