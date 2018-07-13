@@ -10,6 +10,7 @@ import Switch from './components/switch/switch.vue'
 import Checkbox from './components/checkbox/checkbox.vue'
 import CheckboxGroup from './components/checkbox-group/checkboxGroup.vue'
 import Radio from './components/radio/radio.vue'
+import RadioGroup from './components/radio-group/radioGroup.vue'
 import Table from './components/table/table.vue'
 import TableColumn from './components/table-column/tableColumn.vue'
 import Nav from './components/nav/nav.vue'
@@ -38,6 +39,7 @@ const IngtubeComponents = {
         Vue.component(Checkbox.name,Checkbox);
         Vue.component(CheckboxGroup.name,CheckboxGroup);
         Vue.component(Radio.name,Radio);
+        Vue.component(RadioGroup.name,RadioGroup);
         Vue.component(Textarea.name,Textarea);
         Vue.component(Select.name,Select);
         Vue.component(Option.name,Option);

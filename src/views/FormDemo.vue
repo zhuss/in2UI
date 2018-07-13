@@ -26,6 +26,13 @@
                  <in-form-item label="是否独家">
                      <in-switch v-model="form.isSole"></in-switch>
                  </in-form-item>
+                 <in-form-item label="测评类型">
+                     <in-radio-group v-model="form.orderType">
+                        <in-radio v-for="item in orderType" :key="item.value" :label="item.value">
+                            {{item.name}}
+                        </in-radio>
+                     </in-radio-group>
+                 </in-form-item>
                  <in-form-item label="测评渠道">
                      <in-checkbox-group v-model="form.channel">
                         <in-checkbox v-for="item in channelArray" :key="item.value" :label="item.value">
@@ -33,6 +40,7 @@
                         </in-checkbox>
                      </in-checkbox-group>
                  </in-form-item>
+
                  <in-form-item>
                      <in-button type="primary" @click="submitClick">确认</in-button>
                      <in-tip style="margin-left:20px;" content="哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈">
@@ -48,6 +56,7 @@ export default {
     data(){
         return {
             channelArray:[{name:'微博',value:1},{name:'小红书',value:2},{name:'美拍',value:3},{name:'B站',value:4}],
+            orderType:[{name:'图文',value:1},{name:'视频',value:2}],
             form:{
                 title:'',
                 description:'',
@@ -56,6 +65,7 @@ export default {
                 endDate:'2018-06-05',
                 number:1,
                 isSole:true,
+                orderType:1,
                 channel:[]
             }
         }

@@ -1,14 +1,16 @@
 <template>
     <div class="in-radio">
-        <input :disabled="disabled" class="in-radio-input" :class="{'in-radio-input-checked':currentValue==label}" type="radio" v-model="currentValue" :value="label" @change="change">
+        <input :disabled="disabled" class="in-radio-input" type="radio"  :value="label" v-model="currentValue" @change="change">
         <span class="in-radio-ponit"></span>
         <span class="in-radio-text" v-if="$slots.default"><slot></slot></span>
         <span class="in-radio-text" v-else>{{label}}</span>
     </div>
 </template>
 <script>
+import Emitter from '../../utils/emitter.js'
 export default {
     name:'InRadio',
+    mixins: [Emitter],
     props:{
         value:[String,Number],
         label:[String,Number],
@@ -24,9 +26,18 @@ export default {
             currentValue:this.value
         }
     },
+    mounted(){
+        this.$on('init',this.initData);
+    },
     methods:{
+        //初始化数据
+        initData(value){
+            this.currentValue = value;
+        },
         change(e){
+            this.dispatch('InRadioGroup', 'change', this.label);
             this.$emit('input',this.currentValue);
+            this.$emit('change', e);
         }
     }
     
@@ -53,7 +64,7 @@ export default {
         position: absolute;
         left: 0;
         top: 5px;
-        -webkit-appearance: none;
+        //-webkit-appearance: none;
         outline: none;
         margin: 0;
         padding: 0;
@@ -80,23 +91,21 @@ export default {
         &:disabled +.in-radio-ponit {
             opacity: .6;
         }
-    }
-    .in-radio-input-checked{
-        &+.in-radio-ponit{
-        background: @primaryColor;
-        border: 1px solid @primaryColor;
-        &:after{
-                position: absolute;
-                display: block;
-                content: '';
-                left: 9px;
-                top: 9px;
-                width: 10px;
-                height: 10px;
-                border-radius:100%; 
-                background: #FFF;
+        &:checked +.in-radio-ponit{
+            background: @primaryColor;
+            border: 1px solid @primaryColor;
+            &:after{
+                    position: absolute;
+                    display: block;
+                    content: '';
+                    left: 9px;
+                    top: 9px;
+                    width: 10px;
+                    height: 10px;
+                    border-radius:100%; 
+                    background: #FFF;
+                }
             }
-        }
     }
 }
 </style>

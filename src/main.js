@@ -11,7 +11,7 @@ Vue.use(IngtubeUI)
 
 /* eslint-disable no-new */
 new Vue({
-  el: '#app',
+  el: '#in2',
   router,
   components: { App },
   template: '<App/>'

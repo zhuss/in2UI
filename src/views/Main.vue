@@ -70,6 +70,7 @@ export default {
         width: 100%;
         height: 60px;
         background:@primaryColor;
+        background: linear-gradient(90deg, @primaryColor 0%, @primaryColor 50%,#4498F4 100%);
         display: flex;
         >.main-title{
             flex: 1;
