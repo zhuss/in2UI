@@ -3,26 +3,14 @@
         <div class="demo-block" ref="demo">
             <h2 class="demo-title">Tab标签案例</h2>
             <in-tab>
-                <in-tab-panel label="悬赏好创意">
-                <in-form :inline="true">
-                    <in-form-item label="单品测评" >
-                        <in-switch v-model="form.solo"></in-switch>
-                    </in-form-item>
-                </in-form>
+                <in-tab-panel label="我是博主">
+                    大牌新品，小众尖货，免费试用有机会获得大牌青睐，各种合作接到手软辅助博主孵化，海量福利回馈粉丝
                 </in-tab-panel>
-                <in-tab-panel label="悬赏高EMV">
-                    <in-form>
-                    <in-form-item label="EMV门槛">
-                        <in-number v-model="form.emv" :min="50" :max="2000"></in-number>
-                    </in-form-item>
-                </in-form>
+                <in-tab-panel label="我是品牌">
+                    丰富的博主资源精准匹配，提供最优质的推广全面的数据监测分析，投放效果一目了然专业的策划团队，量身打造专属推广方案
                 </in-tab-panel>
-                <in-tab-panel label="悬赏高排名">
-                    <in-form :inline="true">
-                    <in-form-item label="赏金总额">
-                        <in-number v-model="form.number" :min="50" :max="2000"></in-number>
-                    </in-form-item>
-                </in-form>
+                <in-tab-panel label="联系我们">
+                    地址： 杭州市西湖区崇义路郡原公元里7幢3楼 电话： 400-880-1848 邮箱： 
                 </in-tab-panel>
             </in-tab>  
         </div>
