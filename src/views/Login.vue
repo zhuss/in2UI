@@ -41,7 +41,6 @@ export default {
     }
 }
 </script>
-
 <style lang="less" scoped>
 .page-login{
     width: 100%;
@@ -51,13 +50,6 @@ export default {
     .form-login{
         width: 300px;
         margin: 0 auto;
-        >.form-item{
-            margin-bottom: 24px;
-        }
-        .form-title{
-            font-size: 18px;
-            text-align: center;
-        }
     }
 }
 </style>

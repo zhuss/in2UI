@@ -9,8 +9,18 @@
                     <span>in2UI</span>
                 </a>
             </div>
+            <div class="main-notice">
+                <span class="notice"><i class="fa fa-envelope-o"></i> 新消息 5</span>
+            </div>
             <div class="main-login">
-                <router-link :to="{name:'login'}"><i class="fa fa-sign-out"></i> 退出登录</router-link>
+                <in-dropdown @command="command">
+                   <span class="account"><i class="fa fa-user-circle-o"></i> zhushunsheng</span>
+                   <in-dropdown-menu slot="dropdown">
+                       <in-dropdown-item command="account">账户设置</in-dropdown-item>
+                       <in-dropdown-item command="update">修改密码</in-dropdown-item>
+                       <in-dropdown-item command="login">安全退出</in-dropdown-item>
+                   </in-dropdown-menu>
+                </in-dropdown>
             </div>
         </div>
         <div class="main-body">
@@ -33,6 +43,13 @@
 <script>
 export default {
     methods:{
+        command(command){
+           if(command == 'login'){
+               this.$router.replace({
+                   name:'login'
+               });
+           }
+        },
         select(index){
             this.$router.push({
                 name:index
@@ -73,17 +90,24 @@ export default {
                 vertical-align: middle;
             }
         }
+        >.main-notice{
+            padding: 10px 20px;
+            height: 40px;
+            line-height: 40px;
+            >.notice{
+                font-size: 14px;
+                color: #FFF;
+                cursor: pointer;
+            }
+        }
         >.main-login{
             padding: 10px 20px;
             height: 40px;
             line-height: 40px;
-            a{
+            .account{
+                color: #FFF;
                 font-size: 14px;
-               text-decoration: none;
-               color: #EAEAEA;
-               &:hover{
-                   color: #FFF;
-               }
+                cursor: pointer;
             }
         }
     }
