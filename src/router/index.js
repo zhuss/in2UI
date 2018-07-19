@@ -10,7 +10,9 @@ import Login from '../views/Login.vue'
 // import Form from '../views/FormDemo.vue'
 // import Tab from '../views/TabDemo.vue'
 import Input from '../docs/input.md'
+import Select from '../docs/select.md'
 import Switch from '../docs/Switch.md'
+import Table from '../docs/Table.md'
 
 
 Vue.use(Router)
@@ -33,9 +35,17 @@ export default new Router({
         name:'input',
         component:Input
       },{
+        path:'select',
+        name:'select',
+        component:Select
+      },{
         path:'switch',
         name:'switch',
         component:Switch
+      },{
+        path:'table',
+        name:'table',
+        component:Table
       }]
     }
   ]

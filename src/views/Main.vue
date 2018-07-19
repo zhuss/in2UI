@@ -27,10 +27,16 @@
             <div class="main-left">
                 <in-nav :active="$route.name" @select="select">
                     <in-sub-nav>
-                        <template slot="title"><i class="fa fa-graduation-cap"></i>表单 Form</template>
-                        <in-nav-item index="switch"><i class="fa fa-toggle-on"></i> Switch 案例</in-nav-item>
-                        <in-nav-item index="input"><i class="fa fa-pencil"></i> Input 案例</in-nav-item>
+                        <template slot="title"><i class="fa fa-pencil-square-o"></i> 表单 Form</template>
+                        <in-nav-item index="input">Input 案例</in-nav-item>
+                        <in-nav-item index="select">Select 案例</in-nav-item>
+                        <in-nav-item index="switch">Switch 案例</in-nav-item>
                     </in-sub-nav>
+                    <in-sub-nav>
+                        <template slot="title"><i class="fa fa-pencil-square-o"></i> 数据 Data</template>
+                        <in-nav-item index="table">Table 案例</in-nav-item>
+                    </in-sub-nav>
+                    
                 </in-nav>
             </div>
             <div class="main-content">
@@ -139,7 +145,7 @@ export default {
         >.main-content{
             flex: 1;
             overflow: auto;
-            padding: 10px;
+            padding: 30px;
         }
         >.main-content::-webkit-scrollbar{
             width: 0;

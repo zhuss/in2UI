@@ -17,7 +17,7 @@ export default {
 <style lang="less" scoped>
 @import '../../assets/css/base';
 .in-table-column{
-    padding:15px;
+    padding:10px 15px;
     color: @regularColor;
     font-size: 14px;
 }

@@ -54,7 +54,7 @@ export default {
     >tbody tr{
         border-bottom:1px solid @borderColor;
         &:hover{    
-            background: #F5FBF8;
+            background: #F7FDFF;
         }
     }
     >thead{

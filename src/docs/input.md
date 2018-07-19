@@ -1,8 +1,14 @@
+<style>
+.demo-input{
+    width:200px;
+}
+</style>
 <script>
 export default {
     data(){
         return {
-            value1:'哈哈哈哈'
+            value1:'哈哈哈哈',
+            value2:'呵呵呵呵'
         }
     }
 }
@@ -13,7 +19,9 @@ export default {
 ### 基础用法
 
 <div class="demo-block">
-    <in-input v-model="value1"></in-input>
+    <div class="demo-input">
+        <in-input v-model="value1"></in-input>
+    </div>
 </div>
 
 ::: demo
@@ -36,18 +44,20 @@ export default {
 ### 禁用状态
 
 <div class="demo-block">
-    <in-input disabled v-model="value1"></in-input>
+    <div class="demo-input">
+        <in-input disabled v-model="value2"></in-input>
+    </div>
 </div>
 
 ::: demo
 ```html
 
-<in-input disabled v-model="value1"></in-input>
+<in-input disabled v-model="value2"></in-input>
 <script>
 export default {
     data(){
         return {
-            value1:'哈哈哈哈'
+            value2:'呵呵呵呵'
         }
     }
 };

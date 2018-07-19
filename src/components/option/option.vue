@@ -1,5 +1,5 @@
 <template>
-    <div class="in-option" :class="{'in-option-select':isSelect}" @click="itemClick">
+    <div class="in-option" :class="{'in-option-select':isSelect,'in-option-disabled':disabled}" @click="itemClick">
         {{label}}
     </div>
 </template>
@@ -10,7 +10,8 @@ export default {
     mixins:[Emitter],
     props:{
         value:[String,Number],
-        label:[String,Number]
+        label:[String,Number],
+        disabled:Boolean
     },
     data(){
         return {
@@ -22,15 +23,19 @@ export default {
     },
     methods:{
         initData(value){
-            if(value.value == this.value){
+            if(value.value === this.value){
                 this.isSelect = true;
-                this.itemClick();
+                this.dispatch('InSelect', 'select',{value:this.value,label:this.label});
             }else{
                 this.isSelect = false;
             }
         },
         itemClick(){
-            this.dispatch('InSelect', 'select',{value:this.value,label:this.label});
+            if(this.disabled){
+                return false;
+            }else{
+                this.dispatch('InSelect', 'select',{value:this.value,label:this.label});
+            }
         }
     }
 }
@@ -49,6 +54,11 @@ export default {
 }
 .in-option-select{
     color: @primaryColor;
+}
+.in-option-disabled{
+    opacity: .6;
+    background: #EEE;
+    cursor: not-allowed;
 }
 </style>
 
