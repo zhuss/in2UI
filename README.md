@@ -23,4 +23,4 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 
 参考了一下项目
 
-[elementUI](http://element.eleme.io/#/zh-CN/component/input)、 【vvui](https://vv-ui.github.io/VV-UI/#/)、[buefy](https://buefy.github.io/#/)
+[elementUI](http://element.eleme.io/#/zh-CN/component/input)、 [vvui](https://vv-ui.github.io/VV-UI/#/)、[buefy](https://buefy.github.io/#/)
