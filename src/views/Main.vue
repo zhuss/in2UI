@@ -26,12 +26,11 @@
         <div class="main-body">
             <div class="main-left">
                 <in-nav :active="$route.name" @select="select">
-                    <in-nav-item index="demo"><i class="fa fa-dashboard"></i> 案例合集</in-nav-item>
-                    <in-nav-item index="model"><i class="fa fa-desktop"></i> 模态案例</in-nav-item>
-                    <in-nav-item index="table"><i class="fa fa-table"></i> 表格案例</in-nav-item>
-                    <in-nav-item index="nav"><i class="fa fa-bars"></i> 导航案例</in-nav-item>
-                    <in-nav-item index="form"><i class="fa fa-pencil-square-o"></i> 表单案例</in-nav-item>
-                    <in-nav-item index="tab"><i class="fa fa-tasks"></i> Tab案例</in-nav-item>
+                    <in-sub-nav>
+                        <template slot="title"><i class="fa fa-graduation-cap"></i>表单 Form</template>
+                        <in-nav-item index="switch"><i class="fa fa-toggle-on"></i> Switch 案例</in-nav-item>
+                        <in-nav-item index="input"><i class="fa fa-pencil"></i> Input 案例</in-nav-item>
+                    </in-sub-nav>
                 </in-nav>
             </div>
             <div class="main-content">

@@ -10,22 +10,31 @@
 export default {
     name:'InSwitch',
     props:{
-        value:Boolean,
-        disabled:Boolean
+        value:[String,Number,Boolean],
+        disabled:Boolean,
+        activeValue:{
+            type:[String,Number,Boolean],
+            default:true
+        },
+        inactiveValue:{
+            type:[String,Number,Boolean],
+            default:false
+        }
     },
     data(){
         return {
-            currentValue:this.value
+            currentValue:this.value == this.activeValue
         }
     },
     watch:{
         value(value){
-            this.currentValue = value;
+          this.currentValue = this.value == this.activeValue;
         }
     },
     methods:{
         change(e){
-            this.$emit('input',this.currentValue);
+            let value = this.currentValue?this.activeValue:this.inactiveValue;
+            this.$emit('input',value);
             this.$emit('change',e);
         }
     }

@@ -8,6 +8,9 @@ export default {
 }
 </script>
 <style lang="less">
+@import './assets/css/md.less';
+@import '../node_modules/highlight.js/styles/color-brewer.css';
+
 html,body{
     width: 100%;
     height: 100%;
@@ -20,21 +23,5 @@ body,h1,h2,h3,p{
   padding: 0;
   font-weight: normal;
   font-size: 16px;
-}
-.demo-block{
-    margin: 20px 0;
-    .demo-title{
-        line-height: 40px;
-    }
-    &+.demo-block{
-        border-top:1px solid #e6e6e6;
-    }
-    .demo-body{
-        .demo-input{
-            display: inline-block;
-            vertical-align: top;
-            width: 300px;
-        }
-    }
 }
 </style>

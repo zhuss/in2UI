@@ -3,10 +3,12 @@
 import Vue from 'vue'
 import App from './App'
 import IngtubeUI from './index'
+import demoBlock from './views/demo-block.vue'
 import 'font-awesome/css/font-awesome.css'
 import router from './router'
 
 Vue.config.productionTip = false
+Vue.component('demo-block', demoBlock)
 Vue.use(IngtubeUI)
 
 /* eslint-disable no-new */
