@@ -1,7 +1,7 @@
 <template>
   <div class="docs-demo-wrapper">
       <div :style="{height: isExpand ? 'auto' : '0'}" class="demo-container">
-        <div span="14">
+        <div>
           <div class="docs-demo docs-demo--expand">
             <div class="highlight-wrapper">
               <slot name="highlight"></slot>
@@ -15,7 +15,7 @@
 
 <script>
   /* eslint-disable */
-  import Vue from 'vue'
+  //import Vue from 'vue'
   export default {
     data() {
       return {
