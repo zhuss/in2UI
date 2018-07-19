@@ -1,4 +1,4 @@
-# ingtube-ui
+# in2UI
 
 > ui of vue.js 
 
