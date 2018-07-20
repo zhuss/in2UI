@@ -29,8 +29,10 @@
                     <in-sub-nav>
                         <template slot="title"><i class="fa fa-pencil-square-o"></i> 表单 Form</template>
                         <in-nav-item index="input">Input 案例</in-nav-item>
+                        <in-nav-item index="number">Number 案例</in-nav-item>
                         <in-nav-item index="select">Select 案例</in-nav-item>
                         <in-nav-item index="switch">Switch 案例</in-nav-item>
+                        <in-nav-item index="radio">Radio 案例</in-nav-item>
                     </in-sub-nav>
                     <in-sub-nav>
                         <template slot="title"><i class="fa fa-pencil-square-o"></i> 数据 Data</template>
