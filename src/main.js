@@ -3,7 +3,7 @@
 import Vue from 'vue'
 import App from './App'
 import IngtubeUI from './index'
-import demoBlock from './views/demo-block.vue'
+import demoBlock from './views/DemoBlock.vue'
 import 'font-awesome/css/font-awesome.css'
 import router from './router'
 

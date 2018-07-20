@@ -27,7 +27,7 @@ export default {
      margin-top: 24px;
     }
     >.in-form-lable{
-        color: @regularColor;
+        color: @labelColor;
         font-size: 14px;
     }
     >.in-form-content{

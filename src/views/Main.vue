@@ -6,7 +6,7 @@
                     <img class="logo" src="../assets/logo_in2.png" alt="映兔logo">
                 </a>
                 <a href="http://www.ingtube.com">
-                    <span>in2UI</span>
+                    <span>in2UI 组件库</span>
                 </a>
             </div>
             <div class="main-notice">
@@ -35,6 +35,10 @@
                     <in-sub-nav>
                         <template slot="title"><i class="fa fa-pencil-square-o"></i> 数据 Data</template>
                         <in-nav-item index="table">Table 案例</in-nav-item>
+                    </in-sub-nav>
+                    <in-sub-nav>
+                        <template slot="title"><i class="fa fa-clone"></i> 弹出 view</template>
+                        <in-nav-item index="model">Model 案例</in-nav-item>
                     </in-sub-nav>
                     
                 </in-nav>
@@ -92,7 +96,7 @@ export default {
                 vertical-align: middle;
             }
             span{
-                font-size: 26px;
+                font-size: 20px;
                 vertical-align: middle;
             }
         }

@@ -3,16 +3,11 @@ import Router from 'vue-router'
 import Main from '../views/Main.vue'
 import Login from '../views/Login.vue'
 
-// import Demo from '../views/Demo.vue'
-// import Model from '../views/ModelDemo.vue'
-// import Table from '../views/TableDemo.vue'
-// import Nav from '../views/NavDemo.vue'
-// import Form from '../views/FormDemo.vue'
-// import Tab from '../views/TabDemo.vue'
 import Input from '../docs/input.md'
 import Select from '../docs/select.md'
 import Switch from '../docs/Switch.md'
 import Table from '../docs/Table.md'
+import Model from '../docs/Model.md'
 
 
 Vue.use(Router)
@@ -46,6 +41,10 @@ export default new Router({
         path:'table',
         name:'table',
         component:Table
+      },{
+        path:'model',
+        name:'model',
+        component:Model
       }]
     }
   ]
