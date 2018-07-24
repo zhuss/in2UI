@@ -11,6 +11,10 @@ export default {
 };
 </script>
 
+# model 案例
+---
+### 基础用法
+
 <div class="demo-block">
     <in-button @click="show=true">显示model</in-button>
     <in-model title="选择邀约博主" v-model="show" width="800px">

@@ -16,44 +16,4 @@ export default {
     }
 }
 </script>
-<style lang="less" scoped>
-@import '../../assets/css/base';
-.in-button{
-    margin: 0;
-    display: inline-block;
-    -webkit-appearance: none;
-    padding: 0 30px;
-    height: 40px;
-    background: #FFF;
-    border: 1px solid @secondaryColor;
-    color: @regularColor;
-    outline: none;
-    cursor: pointer;
-    font-size: 14px;
-    border-radius:2px;
-    transition: all .3s;
-}
-.in-button+.in-button{
-    margin-left: 10px;
-}
-.in-button__primary{
-  background:@primaryColor;
-  border: 1px solid @primaryColor;
-  color: #FFF;
-}
-.in-button__text{
-  padding: 0;
-  background:transparent;
-  border: none;
-  color:@primaryColor;
-}
-.in-button:disabled{
-    opacity: .6;
-    cursor: not-allowed;
-}
-.in-button.is-round{
-    border-radius:40px;
-}
-</style>
-
 

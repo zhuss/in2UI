@@ -3,7 +3,7 @@
         <slot></slot>
         <transition name="fade">
             <div class="in-popover-warp" :class="['in-popover-'+placement]" v-show="value" :style="{'z-index':zIndex}">
-                <div class="in-popover-content" :style="{width:width+'px'}">
+                <div class="in-popover-content" :style="{width:width}">
                     <slot name="content"></slot>
                 </div>
             </div>
@@ -21,7 +21,7 @@ export default {
     props:{
         width:{
             type:String,
-            default:0
+            default:'auto'
         },
         placement:{
             type:String,

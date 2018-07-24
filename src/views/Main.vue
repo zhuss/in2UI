@@ -27,6 +27,10 @@
             <div class="main-left">
                 <in-nav :active="$route.name" @select="select">
                     <in-sub-nav>
+                        <template slot="title"><i class="fa fa-diamond"></i> 基础 base</template>
+                        <in-nav-item index="button">Button 案例</in-nav-item>
+                    </in-sub-nav>
+                    <in-sub-nav>
                         <template slot="title"><i class="fa fa-pencil-square-o"></i> 表单 Form</template>
                         <in-nav-item index="input">Input 案例</in-nav-item>
                         <in-nav-item index="number">Number 案例</in-nav-item>
@@ -35,12 +39,13 @@
                         <in-nav-item index="radio">Radio 案例</in-nav-item>
                     </in-sub-nav>
                     <in-sub-nav>
-                        <template slot="title"><i class="fa fa-pencil-square-o"></i> 数据 Data</template>
+                        <template slot="title"><i class="fa fa-database"></i> 数据 Data</template>
                         <in-nav-item index="table">Table 案例</in-nav-item>
                     </in-sub-nav>
                     <in-sub-nav>
                         <template slot="title"><i class="fa fa-clone"></i> 弹出 view</template>
                         <in-nav-item index="model">Model 案例</in-nav-item>
+                        <in-nav-item index="popover">Popover 案例</in-nav-item>
                     </in-sub-nav>
                     
                 </in-nav>

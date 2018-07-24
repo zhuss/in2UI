@@ -35,7 +35,7 @@ export default {
         loginClick(){
             this.$message("登录成功");
             this.$router.push({
-                name:'input'
+                name:'button'
             });
         }
     }

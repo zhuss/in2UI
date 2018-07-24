@@ -10,6 +10,8 @@ import Table from '../docs/Table.md'
 import Model from '../docs/Model.md'
 import InNumber from '../docs/number.md'
 import Radio from '../docs/radio.md'
+import Popover from '../docs/popover.md'
+import Button from '../docs/button.md'
 
 
 Vue.use(Router)
@@ -29,6 +31,11 @@ export default new Router({
       component: Main,
       children:[{
         path:'',
+        name:'button',
+        component:Button
+      },
+      {
+        path:'input',
         name:'input',
         component:Input
       },{
@@ -55,6 +62,10 @@ export default new Router({
         path:'model',
         name:'model',
         component:Model
+      },{
+        path:'popover',
+        name:'popover',
+        component:Popover
       }]
     }
   ]

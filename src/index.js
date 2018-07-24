@@ -1,4 +1,5 @@
 import Button from './components/button/button.vue'
+import ButtonGroup from './components/button-group/buttonGroup.vue'
 import Input from './components/input/input.vue'
 import InputNumber from './components/number/number.vue'
 import Textarea from './components/textarea/textarea.vue'
@@ -32,6 +33,7 @@ import MessageBox from './components/message-box/main.js'
 const IngtubeComponents = {
     install(Vue,options){
         Vue.component(Button.name,Button);
+        Vue.component(ButtonGroup.name,ButtonGroup);
         Vue.component(Input.name,Input);
         Vue.component(InputNumber.name,InputNumber);
         Vue.component(Datepicker.name,Datepicker);
