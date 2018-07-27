@@ -13,6 +13,12 @@ import Emitter from '../../utils/emitter.js'
 export default {
     name:'InTab',
     mixins: [Emitter],
+    props:{
+        active:{
+            type:String,
+            default:''
+        }
+    },
     data(){
         return {
             labelArray:[],
@@ -31,7 +37,7 @@ export default {
                 this.labelArray.push(this.$children[i].label);
             }
             if(this.labelArray.length>0){
-                this.currentLabel = this.labelArray[0];
+                this.currentLabel = this.active||this.labelArray[0];
                 this.broadcast('InTabPanel','change',this.currentLabel);
             }
         },

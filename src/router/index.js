@@ -12,6 +12,7 @@ import InNumber from '../docs/number.md'
 import Radio from '../docs/radio.md'
 import Popover from '../docs/popover.md'
 import Button from '../docs/button.md'
+import Tab from '../docs/tabs.md'
 
 
 Vue.use(Router)
@@ -66,6 +67,10 @@ export default new Router({
         path:'popover',
         name:'popover',
         component:Popover
+      },{
+        path:'tab',
+        name:'tab',
+        component:Tab
       }]
     }
   ]

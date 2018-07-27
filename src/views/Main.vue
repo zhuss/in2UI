@@ -43,9 +43,13 @@
                         <in-nav-item index="table">Table 案例</in-nav-item>
                     </in-sub-nav>
                     <in-sub-nav>
-                        <template slot="title"><i class="fa fa-clone"></i> 弹出 view</template>
+                        <template slot="title"><i class="fa fa-clone"></i> 弹出层 view</template>
                         <in-nav-item index="model">Model 案例</in-nav-item>
                         <in-nav-item index="popover">Popover 案例</in-nav-item>
+                    </in-sub-nav>
+                    <in-sub-nav>
+                        <template slot="title"><i class="fa fa-clone"></i> 导航 nav</template>
+                        <in-nav-item index="tab">tab 案例</in-nav-item>
                     </in-sub-nav>
                     
                 </in-nav>
@@ -132,7 +136,7 @@ export default {
         flex: 1;
         display: flex;
         >.main-left{
-            width: 200px;
+            width: 300px;
             height: 100%;
             background: #EEE;
             >.nav{

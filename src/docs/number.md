@@ -20,7 +20,7 @@ export default {
 ::: demo
 ```html
 
-<in-number v-model="value"></in-number>
+<in-number v-model="value2"></in-number>
 
 <script>
 export default {
@@ -44,7 +44,7 @@ export default {
 ::: demo
 ```html
 
-<in-number disabled v-model="value"></in-number>
+<in-number disabled v-model="value3"></in-number>
 
 <script>
 export default {

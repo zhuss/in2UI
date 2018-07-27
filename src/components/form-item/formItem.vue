@@ -1,6 +1,6 @@
 <template>
     <div class="in-form-item">
-        <div class="in-form-lable" v-if="label" :style="{width:labelWidth}">{{label}}</div>
+        <div class="in-form-lable" :style="{width:labelWidth}">{{label}}</div>
         <div class="in-form-content">
             <slot></slot>
         </div>
@@ -10,7 +10,10 @@
 export default {
     name:'InFormItem',
     props:{
-        label:String
+        label:{
+            type:String,
+            default:''
+        }
     },
     data(){
         return {

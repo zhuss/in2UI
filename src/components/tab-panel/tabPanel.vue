@@ -9,7 +9,8 @@ export default {
     name:'InTabPanel',
     mixins: [Emitter],
     props:{
-        label:String
+        label:String,
+        default:''
     },
     data(){
         return {
