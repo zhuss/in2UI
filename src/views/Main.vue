@@ -26,10 +26,7 @@
         <div class="main-body">
             <div class="main-left">
                 <in-nav :active="$route.name" @select="select">
-                    <in-sub-nav>
-                        <template slot="title"><i class="fa fa-diamond"></i> 基础 base</template>
-                        <in-nav-item index="button">Button 案例</in-nav-item>
-                    </in-sub-nav>
+                    <in-nav-item index="button"><i class="fa fa-diamond"></i> Button 案例</in-nav-item>
                     <in-sub-nav>
                         <template slot="title"><i class="fa fa-pencil-square-o"></i> 表单 Form</template>
                         <in-nav-item index="input">Input 案例</in-nav-item>

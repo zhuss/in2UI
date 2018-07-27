@@ -1,6 +1,8 @@
 <template>
     <div class="in-popover" @click="handleClick" v-clickOutSide="clickOutSide">
-        <slot></slot>
+        <div class="in-popover-slot">
+            <slot></slot>
+        </div>
         <transition name="fade">
             <div class="in-popover-warp" :class="['in-popover-'+placement]" v-show="value" :style="{'z-index':zIndex}">
                 <div class="in-popover-content" :style="{width:width}">
@@ -61,6 +63,9 @@ export default {
 .in-popover{
     position: relative;
     display: inline-block;
+    >.in-popover-slot{
+        cursor: pointer;
+    }
     >.in-popover-bottom{
         bottom: -5px;
         left: 0;
