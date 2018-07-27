@@ -94,6 +94,8 @@ export default {
         background:@primaryColor;
         background: linear-gradient(90deg, @primaryColor 0%, @primaryColor 50%,#4498F4 100%);
         display: flex;
+        box-shadow: 0 2px 2px rgba(0,0,0,.2);
+        z-index: 10;
         >.main-title{
             flex: 1;
             padding: 10px 20px;
