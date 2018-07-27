@@ -82,3 +82,9 @@ export default {
 | disabled | 是否禁用 | booblean | true/false | false |
 | active-value | switch拓展的开值 | string/number/boolean | - | true |
 | inactive-value | switch拓展的关值 | string/number/boolean | - | false |
+
+
+###  组件事件
+|事件名称|说明|参数回调|
+|---|---|---|
+| change | 值改变的时候触发 | value |

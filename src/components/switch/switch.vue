@@ -35,7 +35,7 @@ export default {
         change(e){
             let value = this.currentValue?this.activeValue:this.inactiveValue;
             this.$emit('input',value);
-            this.$emit('change',e);
+            this.$emit('change',value);
         }
     }
 }

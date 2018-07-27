@@ -13,6 +13,8 @@ import Radio from '../docs/radio.md'
 import Popover from '../docs/popover.md'
 import Button from '../docs/button.md'
 import Tab from '../docs/tabs.md'
+import Nav from '../docs/nav.md'
+import Pagination from '../docs/pagination.md'
 
 
 Vue.use(Router)
@@ -71,7 +73,15 @@ export default new Router({
         path:'tab',
         name:'tab',
         component:Tab
-      }]
+      },{
+        path:'nav',
+        name:'nav',
+        component:Nav
+      },{
+        path:'pagination',
+        name:'pagination',
+        component:Pagination
+      },]
     }
   ]
 })
