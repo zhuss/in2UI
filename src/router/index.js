@@ -10,11 +10,15 @@ import Table from '../docs/Table.md'
 import Model from '../docs/Model.md'
 import InNumber from '../docs/number.md'
 import Radio from '../docs/radio.md'
+import Checkbox from '../docs/checkbox.md'
+import Form from '../docs/fom.md'
 import Popover from '../docs/popover.md'
 import Button from '../docs/button.md'
 import Tab from '../docs/tabs.md'
 import Nav from '../docs/nav.md'
 import Pagination from '../docs/pagination.md'
+import Message from '../docs/message.md'
+import Dropdown from '../docs/dropdown.md'
 
 
 Vue.use(Router)
@@ -58,6 +62,14 @@ export default new Router({
         name:'radio',
         component:Radio
       },{
+        path:'checkbox',
+        name:'checkbox',
+        component:Checkbox
+      },{
+        path:'form',
+        name:'form',
+        component:Form
+      },{
         path:'table',
         name:'table',
         component:Table
@@ -81,6 +93,14 @@ export default new Router({
         path:'pagination',
         name:'pagination',
         component:Pagination
+      },{
+        path:'message',
+        name:'message',
+        component:Message
+      },{
+        path:'dropdown',
+        name:'dropdown',
+        component:Dropdown
       },]
     }
   ]

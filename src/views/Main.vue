@@ -34,6 +34,8 @@
                         <in-nav-item index="select">Select 案例</in-nav-item>
                         <in-nav-item index="switch">Switch 案例</in-nav-item>
                         <in-nav-item index="radio">Radio 案例</in-nav-item>
+                        <in-nav-item index="checkbox">Checkbox 案例</in-nav-item>
+                        <in-nav-item index="form">Form 案例</in-nav-item>
                     </in-sub-nav>
                     <in-sub-nav>
                         <template slot="title"><i class="fa fa-database"></i> 数据 Data</template>
@@ -43,6 +45,8 @@
                         <template slot="title"><i class="fa fa-clone"></i> 弹出层 view</template>
                         <in-nav-item index="model">Model 案例</in-nav-item>
                         <in-nav-item index="popover">Popover 案例</in-nav-item>
+                        <in-nav-item index="message">Message 案例</in-nav-item>
+                        <in-nav-item index="dropdown">Dropdown 案例</in-nav-item>
                     </in-sub-nav>
                     <in-sub-nav>
                         <template slot="title"><i class="fa fa-clone"></i> 导航 nav</template>
