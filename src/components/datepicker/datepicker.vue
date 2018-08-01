@@ -1,6 +1,6 @@
 <template>
-    <div class="zss-date-picker">
-        <input class="zss-date-input" type="text" placeholder="请选择日期" readonly v-model="currentValue" @focus="inputFocus" />
+    <div class="zss-date-picker" >
+        <input class="zss-date-input" :disabled="disabled" type="text" placeholder="请选择日期" readonly v-model="currentValue" @focus="inputFocus" />
         <transition name="fade">
         <div class="zss-picker-model" @click.self="modelClick" v-show="isShow" :style="{'z-index':zIndex}">
             <div class="zss-panel">
@@ -55,18 +55,20 @@
 </template>
 <script>
 import momnet from 'moment'
+import {getMaxZindex} from '../../utils/dom.js'
 export default {
     name:'InDatepicker',
     props:{
         value:{
             type:String,
             default:'1990-01-15' //生日 联系我可＋QQ:503305196
-        }
+        },
+        disabled:Boolean
     },
     data(){
         return {
             currentValue:'', //当前值
-            zIndex:-1,
+            zIndex:1,
             isShow:false,
             select:'date',
             weekArray:['日','一','二','三','四','五','六'],
@@ -92,15 +94,7 @@ export default {
         },
         //获取当前页面的最大Index
         getIndex(){
-            let zIndex = -1;
-            let array = [...document.all];
-            for(let i = 0; i < array.length; i++){
-                let index = window.getComputedStyle(array[i], null).zIndex;
-                if(index!='auto'&& index > zIndex){
-                    zIndex =  parseInt(index);
-                }
-            }
-            this.zIndex = zIndex+1;
+            this.zIndex = getMaxZindex()+1;
         },
         //获取当前显示日期列表
         getDateArray(){
@@ -238,22 +232,26 @@ export default {
 .zss-date-picker{
     display: inline-block;
     box-sizing: border-box;
-    width: 180px;
+    width: 200px;
     height: 40px;
-    border: 1px solid @secondaryColor;
-    border-radius:2px;
     text-align: center;
 }
 .zss-date-picker >.zss-date-input{
     -webkit-appearance: none;
     width: 100%;
     height: 100%;
-    border: 0;
+    border: 1px solid @secondaryColor;
+    border-radius:2px;
     box-sizing: border-box;
     padding: 0 30px;
     outline: none;
     font-size: 14px;
     color:@regularColor;
+    &:disabled{
+        opacity: .6;
+        background: #EEE;
+        cursor: not-allowed;
+    }
 }
 .zss-date-picker > .zss-picker-model{
     position: fixed;

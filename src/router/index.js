@@ -4,6 +4,7 @@ import Main from '../views/Main.vue'
 import Login from '../views/Login.vue'
 
 import Input from '../docs/input.md'
+import Textarea from '../docs/textarea.md'
 import Select from '../docs/select.md'
 import Switch from '../docs/Switch.md'
 import Table from '../docs/Table.md'
@@ -19,6 +20,8 @@ import Nav from '../docs/nav.md'
 import Pagination from '../docs/pagination.md'
 import Message from '../docs/message.md'
 import Dropdown from '../docs/dropdown.md'
+import Tip from '../docs/tip.md'
+import Datepicker from '../docs/datepicker.md'
 
 
 Vue.use(Router)
@@ -40,11 +43,14 @@ export default new Router({
         path:'',
         name:'button',
         component:Button
-      },
-      {
+      },{
         path:'input',
         name:'input',
         component:Input
+      },{
+        path:'textarea',
+        name:'textarea',
+        component:Textarea
       },{
         path:'number',
         name:'number',
@@ -101,7 +107,15 @@ export default new Router({
         path:'dropdown',
         name:'dropdown',
         component:Dropdown
-      },]
+      },{
+        path:'tip',
+        name:'tip',
+        component:Tip
+      },{
+        path:'datepicker',
+        name:'datepicker',
+        component:Datepicker
+      }]
     }
   ]
 })

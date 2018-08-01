@@ -30,23 +30,23 @@
                     <in-sub-nav>
                         <template slot="title"><i class="fa fa-pencil-square-o"></i> 表单 Form</template>
                         <in-nav-item index="input">Input 案例</in-nav-item>
+                        <in-nav-item index="textarea">Textarea 案例</in-nav-item>
                         <in-nav-item index="number">Number 案例</in-nav-item>
                         <in-nav-item index="select">Select 案例</in-nav-item>
+                        <in-nav-item index="datepicker">Datepicker 案例</in-nav-item>
                         <in-nav-item index="switch">Switch 案例</in-nav-item>
                         <in-nav-item index="radio">Radio 案例</in-nav-item>
                         <in-nav-item index="checkbox">Checkbox 案例</in-nav-item>
                         <in-nav-item index="form">Form 案例</in-nav-item>
                     </in-sub-nav>
-                    <in-sub-nav>
-                        <template slot="title"><i class="fa fa-database"></i> 数据 Data</template>
-                        <in-nav-item index="table">Table 案例</in-nav-item>
-                    </in-sub-nav>
+                    <in-nav-item index="table"><i class="fa fa-table"></i>  Table 案例</in-nav-item>
                     <in-sub-nav>
                         <template slot="title"><i class="fa fa-clone"></i> 弹出层 view</template>
                         <in-nav-item index="model">Model 案例</in-nav-item>
                         <in-nav-item index="popover">Popover 案例</in-nav-item>
                         <in-nav-item index="message">Message 案例</in-nav-item>
                         <in-nav-item index="dropdown">Dropdown 案例</in-nav-item>
+                        <in-nav-item index="tip">Tip 案例</in-nav-item>
                     </in-sub-nav>
                     <in-sub-nav>
                         <template slot="title"><i class="fa fa-clone"></i> 导航 nav</template>
