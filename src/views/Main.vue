@@ -49,7 +49,7 @@
                         <in-nav-item index="tip">Tip 案例</in-nav-item>
                     </in-sub-nav>
                     <in-sub-nav>
-                        <template slot="title"><i class="fa fa-clone"></i> 导航 nav</template>
+                        <template slot="title"><i class="fa fa-bars"></i> 导航 nav</template>
                         <in-nav-item index="tab">tab 案例</in-nav-item>
                         <in-nav-item index="nav">nav 案例</in-nav-item>
                         <in-nav-item index="pagination">pagination 案例</in-nav-item>

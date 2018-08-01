@@ -44,10 +44,3 @@ export default {
     }
 }
 </script>
-
-<style lang="less" scoped>
-.in-checkbox-group{
-    width: 100%;
-    height: auto;
-}
-</style>
