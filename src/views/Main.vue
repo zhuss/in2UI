@@ -140,9 +140,14 @@ export default {
     >.main-body{
         flex: 1;
         display: flex;
+        >.main-left::-webkit-scrollbar{
+            width: 0;
+            height: 0;
+        }
         >.main-left{
             width: 300px;
             height: 100%;
+            overflow: auto;
             background: #EEE;
             >.nav{
                 >.nav-item{
