@@ -103,8 +103,7 @@ export default {
         height: 40px;
         outline: none;
         -webkit-appearance: none;
-        border: 1px solid @secondaryColor;
-        border-radius:2px; 
+        border: 2px solid @secondaryColor;
         font-size: 14px;
         color: @regularColor;
         cursor: pointer;
@@ -119,7 +118,6 @@ export default {
         box-sizing: border-box;
         width: 100%;
         border: 1px solid @secondaryColor;
-        border-radius: 2px;
         background: #FFF;
         box-shadow: 0 0 2px rgba(0, 0, 0, .2);
         >.in-select-arrow{

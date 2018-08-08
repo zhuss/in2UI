@@ -81,10 +81,9 @@ export default {
         min-width: 40px;
         height: 40px;
         text-align: center;
-        line-height: 40px;
+        line-height: 36px;
         box-sizing: border-box;
-        border: 1px solid @secondaryColor;
-        border-radius:2px; 
+        border: 2px solid @secondaryColor;
         color: @regularColor;
         cursor: pointer;
         margin-left: 10px;
@@ -92,28 +91,28 @@ export default {
         >.icon-arrow-left{
             position: absolute;
             display: block;
-            left: 16px;
-            top: 14px;
+            left: 14px;
+            top: 12px;
             width: 10px;
             height: 10px;
-            border-left:1px solid @regularColor;
-            border-bottom:1px solid @regularColor;
+            border-left:2px solid @regularColor;
+            border-bottom:2px solid @regularColor;
             transform: rotate(45deg);
         }
          >.icon-arrow-right{
             position: absolute;
             display: block;
-            left: 12px;
-            top: 14px;
+            left: 10px;
+            top: 12px;
             width: 10px;
             height: 10px;
-            border-right:1px solid @regularColor;
-            border-bottom:1px solid @regularColor;
+            border-right:2px solid @regularColor;
+            border-bottom:2px solid @regularColor;
             transform: rotate(-45deg);
         }
     }
     .in-pagination-active{
-        border: 1px solid @primaryColor;
+        border: 2px solid @primaryColor;
         background: @primaryColor;
         color: #FFF;
     }

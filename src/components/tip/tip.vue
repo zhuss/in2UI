@@ -64,8 +64,7 @@ export default {
         >.in-tip-text{
             background:#000;
             color: #FFF;
-            padding: 10px;
-            border-radius:2px;
+            padding: 10px 20px;
             white-space: nowrap;
             font-size: 14px;
         }

@@ -71,10 +71,10 @@ export default {
         width: 500px;
         height: auto;
         background: #FFF;
-        border-radius:2px; 
         >.in-message-title{
-            padding: 30px 30px 0;
+            padding: 20px 30px;
             font-size: 16px;
+            border-bottom: 2px solid @borderColor;
         }
         >.in-message-text{
             padding: 30px;

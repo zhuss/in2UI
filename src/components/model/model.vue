@@ -72,12 +72,12 @@ export default {
         width: 500px;
         height: auto;
         background: #FFF;
-        border-radius:2px; 
         >.in-model-title{
             padding:30px;
             height: 30px;
             line-height: 30px;
             display: flex;
+            border-bottom: 2px solid @borderColor;
             >.in-model-text{
                 flex: 1;
                 font-size: 18px;
@@ -87,10 +87,11 @@ export default {
             >.in-model-close{
                 width: 30px;
                 height: 30px;
-                text-align: right;
-                line-height: 30px;
-                font-size: 18px;
-                color: @regularColor;
+                text-align: center;
+                line-height: 28px;
+                font-size: 20px;
+                color: @labelColor;
+                background: @secondaryColor;
                 cursor: pointer;
                 &:hover{
                     color: @primaryColor;
@@ -98,7 +99,7 @@ export default {
             }
         }
         >.in-model-body{
-            padding: 0 30px 60px;
+            padding:30px 30px 60px;
         }
     }
 }

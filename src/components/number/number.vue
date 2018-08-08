@@ -102,16 +102,15 @@ export default {
 .in-number{
     width: 180px;
     height: 40px;
-    border: 1px solid @secondaryColor;
+    border: 2px solid @secondaryColor;
     box-sizing: border-box;
     display: inline-flex;
     vertical-align: middle;
-    border-radius:2px; 
     >.in-number-button{
         padding: 0;
         margin: 0;
         width: 38px;
-        height: 38px;
+        height: 100%;
         border: none;
         box-sizing: border-box;
         outline: none;
@@ -135,7 +134,6 @@ export default {
         border: none;
         border-left:1px solid  @secondaryColor;
         border-right:1px solid  @secondaryColor;
-        border-radius:0; 
         font-size: 14px;
         color: @regularColor;
          &[disabled]{

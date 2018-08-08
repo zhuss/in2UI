@@ -33,10 +33,8 @@ export default {
     box-sizing: border-box;
     padding:15px 30px;
     min-width: 300px;
-    background: #F5FBF8;
-    border: 1px solid #EAEAEA;
-    color: @regularColor;
-    border-radius:5px; 
+    background: #000;
+    color: #FFF;
     overflow: hidden;
     transition: all .3s;
     opacity: 0;

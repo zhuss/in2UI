@@ -53,7 +53,7 @@ export default {
 .in-tab{
     width: 100%;
     >.in-tab-head{
-        border-bottom: 1px solid #EEE;
+        border-bottom: 2px solid @borderColor;
         >.in-tab-item{
             display: inline-block;
             height: 40px;
@@ -67,7 +67,7 @@ export default {
                 display: block;
                 content:'';
                 width: 100%;
-                height: 1px;
+                height: 2px;
                 background: transparent;
                 transition: all .3s;
             }

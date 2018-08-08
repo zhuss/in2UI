@@ -58,7 +58,6 @@ export default {
         background: #FFF;
         cursor: pointer;
         position: relative;
-        border-radius:2px;
         >.in-switch-input{
             outline: none;
             position: absolute;
@@ -85,7 +84,6 @@ export default {
                 width: 100%;
                 height: 100%;
                 background: @secondaryColor;
-                border-radius:2px;
                 transition: all .2s;
                 &::after{
                     content: '';
@@ -95,7 +93,6 @@ export default {
                     display: block;
                     width: 20px;
                     height: 20px;
-                    border-radius:4px; 
                     background: #FFF;
                     transition: left .2s;
                 }

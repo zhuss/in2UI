@@ -91,13 +91,11 @@ export default {
             z-index: 10;
         >.in-popover-content{
             width: 200px;
-            border: 1px solid @secondaryColor;
-            border-radius:2px;
+            border: 2px solid @secondaryColor;
             overflow: hidden;
             padding: 20px;
             box-sizing: border-box;
             background: #FFF;
-            box-shadow: 0 0 2px rgba(0, 0, 0, .2);
         }
     }
 }

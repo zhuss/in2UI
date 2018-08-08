@@ -80,8 +80,8 @@ export default {
             width: 30px;
             height: 30px;
             background: #FFF;
-            border: 1px solid @secondaryColor;
-            border-radius:100%; 
+            border: 2px solid @secondaryColor;
+            border-radius:100%;
             box-sizing: border-box;
             transition: all .2s;
         }
