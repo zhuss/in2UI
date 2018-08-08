@@ -73,7 +73,7 @@ export default {
         height: auto;
         background: #FFF;
         >.in-model-title{
-            padding:30px;
+            padding:20px 30px;
             height: 30px;
             line-height: 30px;
             display: flex;

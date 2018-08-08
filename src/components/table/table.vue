@@ -53,13 +53,14 @@ export default {
     text-align: left;
     >tbody tr{
         border-bottom:1px solid @borderColor;
-        &:hover{    
+        transition: all .3s;
+        &:hover{
             background: #F7FDFF;
         }
     }
     >thead{
         >tr{
-            border-bottom:1px solid @borderColor;
+            border-bottom:2px solid @borderColor;
             >th{
                 font-size: 14px;
                 font-weight: normal;
