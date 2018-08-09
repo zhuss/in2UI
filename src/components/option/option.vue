@@ -40,25 +40,4 @@ export default {
     }
 }
 </script>
-<style lang="less" scoped>
-@import '../../assets/css/base.less';
-.in-option{
-    padding: 0 30px;
-    line-height: 40px;
-    font-size: 14px;
-    cursor: pointer;
-    transition: all .3s;
-    &:hover{
-        background: @borderColor;
-    }
-}
-.in-option-select{
-    color: @primaryColor;
-}
-.in-option-disabled{
-    opacity: .6;
-    background: #EEE;
-    cursor: not-allowed;
-}
-</style>
 

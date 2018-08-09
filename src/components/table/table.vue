@@ -45,31 +45,5 @@ export default {
     }
 }
 </script>
-<style lang="less" scoped>
-@import '../../assets/css/base';
-.in-table{
-    width: 100%;
-    border-collapse:collapse;
-    text-align: left;
-    >tbody tr{
-        border-bottom:1px solid @borderColor;
-        transition: all .3s;
-        &:hover{
-            background: #F7FDFF;
-        }
-    }
-    >thead{
-        >tr{
-            border-bottom:2px solid @borderColor;
-            >th{
-                font-size: 14px;
-                font-weight: normal;
-                color: #999;
-                padding: 15px;
-            }
-        }
-    }
-}
-</style>
 
 

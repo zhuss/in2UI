@@ -1,17 +1,24 @@
+<style>
+.nav-wrap{
+    width:260px;
+}
+</style>
 # 导航案例
 ---
 ### 基础用法
 
 <div class="demo-block">
-    <in-nav>
-        <in-nav-item index="1">数据概览</in-nav-item>
-        <in-nav-item index="2">商品管理</in-nav-item>
-        <in-sub-nav inde="3">
-            <template slot="title">物流管理</template>
-            <in-nav-item index="3-1">博主物流</in-nav-item>
-            <in-nav-item index="3-2">粉丝物流</in-nav-item>
-        </in-sub-nav>
-    </in-nav>
+    <div class="nav-wrap">
+        <in-nav>
+            <in-nav-item index="1">数据概览</in-nav-item>
+            <in-nav-item index="2">商品管理</in-nav-item>
+            <in-sub-nav inde="3">
+                <template slot="title">物流管理</template>
+                <in-nav-item index="3-1">博主物流</in-nav-item>
+                <in-nav-item index="3-2">粉丝物流</in-nav-item>
+            </in-sub-nav>
+        </in-nav>
+    </div>
 </div>
 
 :::demo

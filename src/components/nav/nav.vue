@@ -32,11 +32,3 @@ export default {
     }
 }
 </script>
-<style lang="less" scoped>
-.in-nav{
-    width: 100%;
-    background: #EEE;
-}
-</style>
-
-

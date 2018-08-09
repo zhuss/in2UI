@@ -30,9 +30,3 @@ export default {
     }
 }
 </script>
-<style lang="less" scoped>
-.in-dropdown{
-    display: inline-block;
-    position: relative;
-}
-</style>

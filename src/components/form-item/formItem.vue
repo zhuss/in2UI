@@ -17,37 +17,8 @@ export default {
     },
     data(){
         return {
-            labelWidth:this.$parent.labelWidth
+            labelWidth:this.$parent.labelWidth||'80px'
         }
     }
 }
 </script>
-<style lang="less" scoped>
-@import '../../assets/css/base';
-.in-form-item{
-    display: block;
-    & +.in-form-item{
-     margin-top: 24px;
-    }
-    >.in-form-lable{
-        color: @labelColor;
-        font-size: 14px;
-    }
-    >.in-form-content{
-        margin-top: 5px;
-    }
-}
-.in-form-inline{
-    >.in-form-item{
-        display: flex;
-        >.in-form-lable{
-            line-height: 40px;
-            margin-right: 20px;
-        }
-        >.in-form-content{
-            margin-top: 0;
-            flex: 1;
-        }
-    }
-}
-</style>

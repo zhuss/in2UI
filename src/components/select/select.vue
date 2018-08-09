@@ -2,7 +2,7 @@
     <div class="in-select" v-clickOutSide="clickOutSide">
       <div class="in-select-arrow-down" @click="focus"></div>
       <input :disabled="disabled"  v-model="label" class="in-select-input" readonly type="text" placeholder="请选择" @click="focus">
-      <transition name="fade">
+      <transition name="in-select-fade">
         <div class="in-select-panel" :style="{'z-index':zIndex}" v-show="isShow">
             <div class="in-select-arrow" :style="{'z-index':zIndex}" ></div>
             <div class="in-select-scroll">
@@ -69,95 +69,4 @@ export default {
     }
 }
 </script>
-<style lang="less" scoped>
-@import '../../assets/css/base';
-.fade-enter-active, .fade-leave-active {
-   transition: all .3s
-}
-.fade-enter, .fade-leave-to {
-    opacity: 0;
-    transform: translateY(5px);
-}
-.in-select{
-    display: inline-block;
-    width: 100%;
-    height: 40px;
-    position: relative;
-    >.in-select-arrow-down{
-        position: absolute;
-        width: 10px;
-        height: 10px;
-        border-bottom: 1px solid @secondaryColor;
-        border-left: 1px solid @secondaryColor;
-        right: 20px;
-        top: 12px;
-        z-index: 1;
-        transform: rotate(-45deg);
-        cursor: pointer;
-    }
-    >.in-select-input{
-        position: absolute;
-        box-sizing: border-box;
-        padding: 0 50px 0 30px;
-        width: 100%;
-        height: 40px;
-        outline: none;
-        -webkit-appearance: none;
-        border: 2px solid @secondaryColor;
-        font-size: 14px;
-        color: @regularColor;
-        cursor: pointer;
-        &:disabled{
-            opacity: .6;
-            background: #EEE;
-        }
-    }
-    >.in-select-panel{
-        position: absolute;
-        top: 50px;
-        box-sizing: border-box;
-        width: 100%;
-        border: 1px solid @secondaryColor;
-        background: #FFF;
-        box-shadow: 0 0 2px rgba(0, 0, 0, .2);
-        >.in-select-arrow{
-            position: absolute;
-            left: 50%;
-            top: -10px;
-            transform:translateX(-5px);
-            width: 0;
-            height: 0;
-            border-bottom:10px solid @secondaryColor;
-            border-left:10px solid transparent;
-            border-right:10px solid transparent;
-            &::after{
-                position: absolute;
-                left: -9px;
-                top: 1px;
-                content: '';
-                display: block;
-                width: 0;
-                height: 0;
-                border-bottom:9px solid #FFF;
-                border-left:9px solid transparent;
-                border-right:9px solid transparent;
-            }
-        }
-        >.in-select-scroll{
-            padding: 10px 0;
-            max-height: 200px;
-            overflow-y: auto;
-        }
-    }
-    .in-select-scroll::-webkit-scrollbar{
-        width: 4px;
-        height: 4px;
-        background: #EEE;
-    }
-    ::-webkit-scrollbar-thumb{
-        background: rgba(0,0,0,.2);
-        border-radius:4px; 
-    }
-}
-</style>
 

@@ -1,5 +1,5 @@
 <template>
-    <td class="in-table-column">
+    <td>
         <slot></slot>
     </td>
 </template>
@@ -9,18 +9,10 @@ export default {
     props:{
         label:{
             type:String,
-            default:""
+            default:''
         }
     }
 }
 </script>
-<style lang="less" scoped>
-@import '../../assets/css/base';
-.in-table-column{
-    padding:10px 15px;
-    color: @regularColor;
-    font-size: 14px;
-}
-</style>
 
 

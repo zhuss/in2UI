@@ -1,5 +1,5 @@
 <template>
-<transition name="fade">
+<transition name="in-message-fade">
     <div class="in-message-box" v-show="isShow" :style="{'z-index':zIndex}">
        <div class="in-message-panel">
             <div class="in-message-title">{{title}}</div>
@@ -47,45 +47,4 @@ export default {
     }
 }
 </script>
-<style lang="less" scoped>
-@import '../../assets/css/base';
-.fade-enter-active, .fade-leave-active {
-  transition: all .3s
-}
-.fade-enter, .fade-leave-to {
-    opacity: 0;
-    transform: scale(1.2);
-}
-.in-message-box{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 100;
-    background: rgba(0,0,0,0.5);
-    display: flex;
-    align-items: center;
-    >.in-message-panel{
-        margin: 0 auto;
-        width: 500px;
-        height: auto;
-        background: #FFF;
-        >.in-message-title{
-            padding: 20px 30px;
-            font-size: 16px;
-            border-bottom: 2px solid @borderColor;
-        }
-        >.in-message-text{
-            padding: 30px;
-            font-size: 14px;
-           color: @regularColor;
-        }
-        >.in-message-footer{
-            text-align: right;
-            padding: 0 30px 30px;
-        }
-    }
-}
-</style>
 

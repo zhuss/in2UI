@@ -48,38 +48,5 @@ export default {
     }
 }
 </script>
-<style lang="less" scoped>
-@import '../../assets/css/base.less';
-.in-tab{
-    width: 100%;
-    >.in-tab-head{
-        border-bottom: 2px solid @borderColor;
-        >.in-tab-item{
-            display: inline-block;
-            height: 40px;
-            line-height: 40px;
-            cursor: pointer;
-            transition: all .3s;
-            &+.in-tab-item{
-                margin-left: 40px;
-            }
-            &::after{
-                display: block;
-                content:'';
-                width: 100%;
-                height: 2px;
-                background: transparent;
-                transition: all .3s;
-            }
-        }
-        >.in-tab-item-active{
-            color: @primaryColor;
-            &::after{
-                background: @primaryColor;
-            }
-        }
-    }
-}
-</style>
 
 

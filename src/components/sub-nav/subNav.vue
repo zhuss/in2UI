@@ -52,53 +52,5 @@ export default {
     }
 }
 </script>
-<style lang="less" scoped>
-@import '../../assets/css/base';
-.in-sub-nav{
-    >.in-sub-title{
-        padding: 0 20px;
-        height: 50px;
-        line-height: 50px;
-        cursor: pointer;
-        display: flex;
-        color: @regularColor;
-        &:hover{
-            background: #EAEAEA;
-        }
-        >.in-sub-text{
-            flex: 1;
-            height: 50px;
-        }
-        >.in-sub-icon{
-            width: 50px;
-            height: 50px;
-            position: relative;
-            transition: all .3s;
-            &::after{
-                position: absolute;
-                left: 20px;
-                top: 18px;
-                display: block;
-                content: '';
-                width: 10px;
-                height: 10px;
-                border-right:1px solid #CCC;
-                border-bottom:1px solid #CCC;
-                transform: rotate(45deg);
-            }
-        }
-        >.in-sub-icon-open{
-             transform: rotate(180deg);
-        }
-    }
-    >.in-sub-warp{
-        overflow: hidden;
-        transition: all .3s;
-        >.in-nav-item{
-           padding-left: 40px;
-        }
-    }
-}
-</style>
 
 

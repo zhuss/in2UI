@@ -3,7 +3,7 @@
         <div class="in-popover-slot">
             <slot></slot>
         </div>
-        <transition name="fade">
+        <transition name="in-popover-fade">
             <div class="in-popover-warp" :class="['in-popover-'+placement]" v-show="value" :style="{'z-index':zIndex}">
                 <div class="in-popover-content" :style="{width:width}">
                     <slot name="content"></slot>
@@ -51,53 +51,4 @@ export default {
     }
 }
 </script>
-
-<style lang="less" scoped>
-@import '../../assets/css/base';
-.fade-enter-active, .fade-leave-active {
-   transition: all .3s;
-}
-.fade-enter, .fade-leave-to {
-    opacity: 0;
-}
-.in-popover{
-    position: relative;
-    display: inline-block;
-    >.in-popover-slot{
-        cursor: pointer;
-    }
-    >.in-popover-bottom{
-        bottom: -5px;
-        left: 0;
-        transform: translateY(100%);
-    }
-    >.in-popover-top{
-        top: -5px;
-        left: 0;
-        transform: translateY(-100%);
-    }
-    >.in-popover-left{
-        top: 0;
-        left:-5px;
-        transform: translateX(-100%);
-    }
-    >.in-popover-right{
-        top: 0;
-        right:-5px;
-        transform: translateX(100%);
-    }
-    >.in-popover-warp{
-            position: absolute;
-            z-index: 10;
-        >.in-popover-content{
-            width: 200px;
-            border: 2px solid @secondaryColor;
-            overflow: hidden;
-            padding: 20px;
-            box-sizing: border-box;
-            background: #FFF;
-        }
-    }
-}
-</style>
 

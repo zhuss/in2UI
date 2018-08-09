@@ -30,20 +30,3 @@ export default {
     }
 }
 </script>
-<style lang="less" scoped>
-@import '../../assets/css/base';
-.in-nav-item{
-    padding: 0 20px;
-    height: 50px;
-    line-height: 50px;
-    cursor: pointer;
-    color: @regularColor;
-    transition: color .3s;
-    &:hover{
-        background: #EAEAEA;
-    }
-}
-.in-nav-active{
-    color: @primaryColor;
-}
-</style>

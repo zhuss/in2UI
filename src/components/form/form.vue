@@ -12,9 +12,4 @@ export default {
     }
 }
 </script>
-<style lang="less" scoped>
-.in-form{
-    width: 100%;
-}
-</style>
 

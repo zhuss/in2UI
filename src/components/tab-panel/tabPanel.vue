@@ -27,14 +27,5 @@ export default {
     }
 }
 </script>
-<style lang="less" scoped>
-.in-tab-panel{
-    display: none;
-    padding: 20px 0;
-}
-.in-tab-panel_active{
-    display: block;
-}
-</style>
 
 

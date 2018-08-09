@@ -33,10 +33,3 @@ export default {
     }
 }
 </script>
-
-<style lang="less" scoped>
-.in-radio-group{
-    width: 100%;
-    height: auto;
-}
-</style>

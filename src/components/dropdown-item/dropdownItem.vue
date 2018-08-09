@@ -21,25 +21,5 @@ export default {
     }
 }
 </script>
-<style lang="less" scoped>
-@import '../../assets/css/base';
-.in-dropdown-item{
-    padding:0 15px;
-    list-style: none;
-    height: 40px;
-    line-height: 40px;
-    text-align: left;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space:nowrap; 
-    word-break: break-all;
-    cursor: pointer;
-    color: @regularColor;
-    font-size: 14px;
-    &:hover{
-        background: #EEE;
-    }
-}
-</style>
 
 

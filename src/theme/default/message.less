@@ -1,0 +1,58 @@
+@import './base.less';
+.in-message{
+    position: fixed;
+    top: 30px;
+    left: 50%;
+    transform:translateX(-50%) translateY(-30px);
+    box-sizing: border-box;
+    padding:15px 30px;
+    min-width: 300px;
+    background: #000;
+    color: #FFF;
+    overflow: hidden;
+    transition: all .3s;
+    opacity: 0;
+}
+.in-message-active{
+    opacity: 1;
+    transform:translateX(-50%) translateY(0);
+}
+
+.in-message-fade-enter-active, .in-message-fade-leave-active {
+  transition: all .3s
+}
+.in-message-fade-enter, .in-message-fade-leave-to {
+    opacity: 0;
+    transform: scale(1.2);
+}
+.in-message-box{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    >.in-message-panel{
+        margin: 0 auto;
+        width: 500px;
+        height: auto;
+        background: #FFF;
+        >.in-message-title{
+            padding: 20px 30px;
+            font-size: 16px;
+            border-bottom: 2px solid @borderColor;
+        }
+        >.in-message-text{
+            padding: 30px;
+            font-size: 14px;
+           color: @regularColor;
+        }
+        >.in-message-footer{
+            text-align: right;
+            padding: 0 30px 30px;
+        }
+    }
+}
