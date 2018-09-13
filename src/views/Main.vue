@@ -34,6 +34,7 @@
                         <in-nav-item index="number">Number 案例</in-nav-item>
                         <in-nav-item index="select">Select 案例</in-nav-item>
                         <in-nav-item index="datepicker">Datepicker 案例</in-nav-item>
+                        <in-nav-item index="citypicker">Citypicker 案例</in-nav-item>
                         <in-nav-item index="switch">Switch 案例</in-nav-item>
                         <in-nav-item index="radio">Radio 案例</in-nav-item>
                         <in-nav-item index="checkbox">Checkbox 案例</in-nav-item>

@@ -22,6 +22,7 @@ import Message from '../docs/message.md'
 import Dropdown from '../docs/dropdown.md'
 import Tip from '../docs/tip.md'
 import Datepicker from '../docs/datepicker.md'
+import Citypicker from '../docs/citypicker.md'
 
 
 Vue.use(Router)
@@ -115,6 +116,10 @@ export default new Router({
         path:'datepicker',
         name:'datepicker',
         component:Datepicker
+      },{
+        path:'citypicker',
+        name:'citypicker',
+        component:Citypicker
       }]
     }
   ]

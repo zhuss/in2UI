@@ -1,6 +1,6 @@
 <template>
     <div class="in-option" :class="{'in-option-select':isSelect,'in-option-disabled':disabled}" @click="itemClick">
-        {{label}}
+        {{currentLabel}}
     </div>
 </template>
 <script>
@@ -18,8 +18,20 @@ export default {
             isSelect:false
         }
     },
+    computed:{
+        currentLabel() {
+            return this.label || (this.isObject ? '' : this.value);
+        },
+    },
     mounted(){
         this.$on('init',this.initData);
+    },
+    watch:{
+        currentLabel(value) {
+            if(this.isSelect){
+                this.dispatch('InSelect', 'select',{value:this.value,label:this.label});
+            }
+        },
     },
     methods:{
         initData(value){
