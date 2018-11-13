@@ -11,13 +11,13 @@ export default {
 };
 </script>
 
-# model 案例
+# modal 案例
 ---
 ### 基础用法
 
 <div class="demo-block">
-    <in-button @click="show=true">显示model</in-button>
-    <in-model title="选择邀约博主" v-model="show" width="800px">
+    <in-button @click="show=true">显示modal</in-button>
+    <in-modal title="选择邀约博主" v-model="show" width="800px">
         <in-form>
             <in-form-item label="用户昵称">
                 <in-input></in-input>
@@ -30,13 +30,13 @@ export default {
                 <in-button @click="show=false">取消</in-button>
             </in-form-item>
         </in-form>
-    </in-model>
+    </in-modal>
 </div>
 
 ::: demo
 ```html
-<in-button @click="show=true">显示model</in-button>
-<in-model title="选择邀约博主" v-model="show">
+<in-button @click="show=true">显示modal</in-button>
+<in-modal title="选择邀约博主" v-model="show">
     <in-form>
         <in-form-item label="用户名称">
             <in-input></in-input>
@@ -46,7 +46,7 @@ export default {
             <in-button @click="show=false">取消</in-button>
         </in-form-item>
     </in-form>
-</in-model>
+</in-modal>
 
 <script>
 export default {

@@ -6,7 +6,7 @@ import Textarea from './components/textarea/textarea.vue'
 import Select from './components/select/select.vue'
 import Option from './components/option/option.vue'
 import Pagination from './components/pagination/pagination.vue'
-import Model from './components/model/model.vue'
+import Modal from './components/modal/modal.vue'
 import Switch from './components/switch/switch.vue'
 import Checkbox from './components/checkbox/checkbox.vue'
 import CheckboxGroup from './components/checkbox-group/checkboxGroup.vue'
@@ -49,7 +49,7 @@ const IngtubeComponents = {
         Vue.component(Nav.name,Nav);
         Vue.component(SubNav.name,SubNav);
         Vue.component(NavItem.name,NavItem);
-        Vue.component(Model.name,Model);
+        Vue.component(Modal.name,Modal);
         Vue.component(Table.name,Table);
         Vue.component(TableColumn.name,TableColumn);
         Vue.component(Form.name,Form);

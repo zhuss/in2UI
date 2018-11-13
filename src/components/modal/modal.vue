@@ -16,7 +16,7 @@
 <script>
 import {getMaxZindex} from '../../utils/dom.js'
 export default {
-    name:'InModel',
+    name:'InModal',
     props:{
         title:String,
         value:Boolean,

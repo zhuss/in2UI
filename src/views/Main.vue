@@ -43,7 +43,7 @@
                     <in-nav-item index="table"><i class="fa fa-table"></i>  Table 案例</in-nav-item>
                     <in-sub-nav>
                         <template slot="title"><i class="fa fa-clone"></i> 弹出层 view</template>
-                        <in-nav-item index="model">Model 案例</in-nav-item>
+                        <in-nav-item index="modal">Modal 案例</in-nav-item>
                         <in-nav-item index="popover">Popover 案例</in-nav-item>
                         <in-nav-item index="message">Message 案例</in-nav-item>
                         <in-nav-item index="dropdown">Dropdown 案例</in-nav-item>

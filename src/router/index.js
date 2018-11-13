@@ -8,7 +8,7 @@ import Textarea from '../docs/textarea.md'
 import Select from '../docs/select.md'
 import Switch from '../docs/Switch.md'
 import Table from '../docs/Table.md'
-import Model from '../docs/Model.md'
+import Modal from '../docs/Modal.md'
 import InNumber from '../docs/number.md'
 import Radio from '../docs/radio.md'
 import Checkbox from '../docs/checkbox.md'
@@ -81,9 +81,9 @@ export default new Router({
         name:'table',
         component:Table
       },{
-        path:'model',
-        name:'model',
-        component:Model
+        path:'modal',
+        name:'modal',
+        component:Modal
       },{
         path:'popover',
         name:'popover',
