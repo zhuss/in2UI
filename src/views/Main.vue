@@ -93,8 +93,7 @@ export default {
     >.main-top{
         width: 100%;
         height: 60px;
-        background:@primaryColor;
-        background: linear-gradient(90deg, @primaryColor 0%, @primaryColor 50%,#4498F4 100%);
+        background:rgba(18,170,156,1);
         display: flex;
         box-shadow: 0 2px 2px rgba(0,0,0,.2);
         z-index: 10;
