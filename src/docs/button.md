@@ -5,6 +5,7 @@
 <div class="demo-block">
     <in-button>基础按钮</in-button>
     <in-button type="primary">主要按钮</in-button>
+    <in-button type="danger">危险按钮</in-button>
     <in-button type="text">文字按钮</in-button>
 </div>
 
@@ -13,6 +14,7 @@
 
 <in-button>基础按钮</in-button>
 <in-button type="primary">主要按钮</in-button>
+<in-button type="danger">危险按钮</in-button>
 <in-button type="text">文字按钮</in-button>
 
 ```
@@ -23,6 +25,7 @@
 <div class="demo-block">
     <in-button disabled>基础按钮</in-button>
     <in-button disabled type="primary">主要按钮</in-button>
+    <in-button disabled type="danger">危险按钮</in-button>
     <in-button disabled type="text">文字按钮</in-button>
 </div>
 
@@ -31,6 +34,7 @@
 
 <in-button disabled>基础按钮</in-button>
 <in-button disabled type="primary">主要按钮</in-button>
+<in-button disabled type="danger">危险按钮</in-button>
 <in-button disabled type="text">文字按钮</in-button>
 
 ```
