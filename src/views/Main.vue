@@ -10,6 +10,9 @@
                 </a>
             </div>
             <div class="main-notice">
+                <a class="notice" href="https://github.com/zhuss/in2UI">github</a>
+            </div>
+            <div class="main-notice">
                 <span class="notice"><i class="fa fa-envelope-o"></i> 新消息 5</span>
             </div>
             <div class="main-login">
