@@ -148,27 +148,11 @@ export default {
             height: 0;
         }
         >.main-left{
-            width: 300px;
+            width: 200px;
             height: 100%;
             overflow: auto;
-            background: #EEE;
-            >.nav{
-                >.nav-item{
-                    padding: 0  20px;
-                    height: 50px;
-                    line-height: 50px;
-                    display: block;
-                    text-decoration: none;
-                    color: #333;
-                    transition: all .3s;
-                    &:hover{
-                        background: #EAEAEA;
-                    }
-                }
-                >.nav-active{
-                    color: #25b864;
-                }
-            }
+            background: #FFF;
+            border-right:1px solid #E6E6E6;
         }
         >.main-content{
             flex: 1;
