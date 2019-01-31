@@ -2,10 +2,10 @@
     <div class="page-main">
         <div class="main-top">
             <div class="main-title">
-                <a href="http://www.ingtube.com">
+                <a href="javascript:;">
                     <img class="logo" src="../assets/logo_in2.png" alt="映兔logo">
                 </a>
-                <a href="http://www.ingtube.com">
+                <a href="javascript:;">
                     <span>in2UI 组件库</span>
                 </a>
             </div>
