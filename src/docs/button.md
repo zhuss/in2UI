@@ -1,6 +1,7 @@
 # button组件案例
 ---
 ### 基础用法
+
 <div class="demo-block">
     <in-button>基础按钮</in-button>
     <in-button type="primary">主要按钮</in-button>
@@ -10,10 +11,12 @@
 
 ::: demo
 ```html
+
 <in-button>基础按钮</in-button>
 <in-button type="primary">主要按钮</in-button>
 <in-button type="danger">危险按钮</in-button>
 <in-button type="text">文字按钮</in-button>
+
 ```
 :::
 

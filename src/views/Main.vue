@@ -96,7 +96,7 @@ export default {
     >.main-top{
         width: 100%;
         height: 60px;
-        background:#0F67FF;
+        background:rgba(18,170,156,1);
         display: flex;
         box-shadow: 0 2px 2px rgba(0,0,0,.2);
         z-index: 10;
