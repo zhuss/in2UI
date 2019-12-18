@@ -1,0 +1,28 @@
+name: upload oss
+
+on: 
+  push:
+    branches:    
+      - test
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [8.x, 10.x, 12.x]
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@master
+    
+    - name: setup aliyun oss
+      uses: manyuanrong/setup-ossutil@master
+      with:
+        endpoint: oss-cn-shanghai.aliyuncs.com
+        access-key-id: ${{ secrets.accessKeyId }}
+        access-key-secret: ${{ secrets.accessKeySecret }}
+    - name: cp files to aliyun
+      run: ossutil cp -rf ./dist oss://zhuss/test/
