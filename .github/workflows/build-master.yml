@@ -1,9 +1,9 @@
 name: upload oss
 
-on: 
+on:
   push:
-    branches:    
-      - master
+    # branches:
+    #   - master
 
 jobs:
   build:
@@ -17,7 +17,7 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@master
-    
+
     - name: setup aliyun oss
       uses: manyuanrong/setup-ossutil@master
       with:
@@ -26,3 +26,7 @@ jobs:
         access-key-secret: ${{ secrets.accessKeySecret }}
     - name: cp files to aliyun
       run: ossutil cp -rf ./dist oss://zhuss/
+      if: github.ref == 'refs/heads/master'
+    - name: cp files to aliyun
+      run: ossutil cp -rf ./dist oss://zhuss/dev
+      if: github.ref != 'refs/heads/master'
