@@ -3,7 +3,7 @@
             <div class="form-login">
                 <in-form>
                     <in-form-item>
-                        <h2 class="form-title">in2 后台登录</h2>
+                        <h2 class="form-title">in2 后台登录 测试线上打包</h2>
                     </in-form-item>
                     <in-form-item>
                         <in-input placeholder="请输入邮箱" v-model="form.email"></in-input>
