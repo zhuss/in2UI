@@ -1,32 +1,32 @@
-name: upload oss
+# name: upload oss
 
-on:
-  push:
-    # branches:
-    #   - master
+# on:
+#   push:
+#     # branches:
+#     #   - master
 
-jobs:
-  build:
+# jobs:
+#   build:
 
-    runs-on: ubuntu-latest
+#     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [8.x, 10.x, 12.x]
+#     strategy:
+#       matrix:
+#         node-version: [8.x, 10.x, 12.x]
 
-    steps:
-    - name: Checkout
-      uses: actions/checkout@master
+#     steps:
+#     - name: Checkout
+#       uses: actions/checkout@master
 
-    - name: setup aliyun oss
-      uses: manyuanrong/setup-ossutil@master
-      with:
-        endpoint: oss-cn-shanghai.aliyuncs.com
-        access-key-id: ${{ secrets.accessKeyId }}
-        access-key-secret: ${{ secrets.accessKeySecret }}
-    - name: cp files to aliyun
-      run: ossutil cp -rf ./dist oss://zhuss/
-      if: github.ref == 'refs/heads/master'
-    - name: cp files to aliyun
-      run: ossutil cp -rf ./dist oss://zhuss/dev
-      if: github.ref != 'refs/heads/master'
+#     - name: setup aliyun oss
+#       uses: manyuanrong/setup-ossutil@master
+#       with:
+#         endpoint: oss-cn-shanghai.aliyuncs.com
+#         access-key-id: ${{ secrets.accessKeyId }}
+#         access-key-secret: ${{ secrets.accessKeySecret }}
+#     - name: cp files to aliyun
+#       run: ossutil cp -rf ./dist oss://zhuss/
+#       if: github.ref == 'refs/heads/master'
+#     - name: cp files to aliyun
+#       run: ossutil cp -rf ./dist oss://zhuss/dev
+#       if: github.ref != 'refs/heads/master'
