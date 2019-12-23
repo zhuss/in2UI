@@ -30,3 +30,47 @@
 #     - name: cp files to aliyun
 #       run: ossutil cp -rf ./dist oss://zhuss/dev
 #       if: github.ref != 'refs/heads/master'
+
+
+name: upload oss
+
+on: 
+  push:
+    branches:    
+      - master
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    # strategy:
+    #   matrix:
+    #     node-version: [8.x, 10.x, 12.x]
+
+    steps:
+      #拉取代码
+    - name: Checkout
+      uses: actions/checkout@master
+
+     # 使用 node:10
+    - name: use Node.js 10.x
+      uses: actions/setup-node@v1
+      with:
+        node-version: 10.x 
+      
+      #打包
+    - name: build
+      run: |
+        yarn install
+        yarn run build
+
+    - name: setup aliyun oss
+      uses: manyuanrong/setup-ossutil@master
+      with:
+        endpoint: oss-cn-shanghai.aliyuncs.com
+        access-key-id: ${{ secrets.accessKeyId }}
+        access-key-secret: ${{ secrets.accessKeySecret }}
+        
+    - name: cp files to aliyun
+      run: ossutil cp -rf ./dist oss://zhuss/
